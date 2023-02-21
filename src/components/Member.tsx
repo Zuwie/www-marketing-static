@@ -1,5 +1,5 @@
-import ReactMarkdown from "react-markdown";
-import { IMember } from "@/src/members/model";
+// import ReactMarkdown from "react-markdown";
+import { IMember } from "@/src/pages/members/model";
 import Image from "next/image";
 
 export default function Member({ attributes }: Pick<IMember, "attributes">) {
@@ -14,7 +14,7 @@ export default function Member({ attributes }: Pick<IMember, "attributes">) {
         <p className="text-indigo-600">{attributes.role}</p>
       </div>
       <div className="text-lg text-gray-500">
-        <ReactMarkdown>{attributes.bio}</ReactMarkdown>
+        {/*<ReactMarkdown>{attributes.bio}</ReactMarkdown>*/}
       </div>
     </div>
   );

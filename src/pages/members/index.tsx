@@ -1,9 +1,8 @@
-import { fetchAPI } from "@/src/api/api";
-import Member from "@/components/Member";
-import { IMember } from "@/src/members/model";
+// import Member from "@/src/components/Member";
+// import { IMember } from "@/src/pages/members/model";
 
-export default async function Page() {
-  const {data} = await fetchAPI('/members', { populate: '*' });
+export default async function Index() {
+  // const {data} = await fetchAPI('/members', { populate: '*' });
 
   return(
     <>
@@ -22,11 +21,11 @@ export default async function Page() {
                 role="list"
                 className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
               >
-                {data && data.map(({id, attributes}: IMember) => (
-                  <li key={id}>
-                    <Member attributes={attributes}/>
-                  </li>
-                ))}
+                {/*{data && data.map(({id, attributes}: IMember) => (*/}
+                {/*  <li key={id}>*/}
+                {/*    <Member attributes={attributes}/>*/}
+                {/*  </li>*/}
+                {/*))}*/}
               </ul>
             </div>
           </div>
