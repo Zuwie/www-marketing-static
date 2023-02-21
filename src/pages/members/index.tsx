@@ -1,7 +1,7 @@
 // import Member from "@/src/components/Member";
 // import { IMember } from "@/src/pages/members/model";
 
-export default async function Index() {
+export default function Index() {
   // const {data} = await fetchAPI('/members', { populate: '*' });
 
   return(
