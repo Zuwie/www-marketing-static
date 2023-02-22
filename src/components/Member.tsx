@@ -1,20 +1,20 @@
-// import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import { IMember } from "@/src/pages/members/model";
-// import Image from "next/image";
+import Image from "next/image";
 
-export default function Member({ attributes }: Pick<IMember, "attributes">) {
+export default function Member({data}: {data: IMember}) {
   return (
     <div className="space-y-4">
-      <div className="aspect-w-3 aspect-h-2 relative">
-        {/*<Image fill className="rounded-lg object-cover shadow-lg"*/}
-        {/*     src={process.env.NEXT_PUBLIC_STRAPI_URL + attributes.profilePicture.data.attributes.url} alt=""/>*/}
+      <div className="aspect-w-3 aspect-h-3 relative">
+        <Image fill className="rounded-lg object-cover shadow-lg"
+             src={data.profilePicture} alt=""/>
       </div>
       <div className="space-y-1 text-lg font-medium leading-6">
-        <h3>{attributes.name}</h3>
-        <p className="text-indigo-600">{attributes.role}</p>
+        <h3>{data.name}</h3>
+        <p className="text-indigo-600">{data.role}</p>
       </div>
       <div className="text-lg text-gray-500">
-        {/*<ReactMarkdown>{attributes.bio}</ReactMarkdown>*/}
+        <ReactMarkdown>{data.body}</ReactMarkdown>
       </div>
     </div>
   );
