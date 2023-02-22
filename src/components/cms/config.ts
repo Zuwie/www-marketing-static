@@ -84,6 +84,7 @@ const config: Config = {
       folder: "content/members",
       format: "json",
       create: true,
+      identifier_field: "name",
       fields: [
         { label: "Name", name: "name", widget: "string" },
         { label: "Role", name: "role", widget: "string" },
