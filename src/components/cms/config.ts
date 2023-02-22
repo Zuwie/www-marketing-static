@@ -79,6 +79,19 @@ const config: Config = {
       ],
     },
     {
+      name: "members",
+      label: "Members",
+      folder: "content/members",
+      format: "json",
+      create: true,
+      fields: [
+        { label: "Name", name: "name", widget: "string" },
+        { label: "Role", name: "role", widget: "string" },
+        { label: 'Profile Picture', name: 'profilePicture', hint: 'Im Format (1104 x 560)', widget: 'image' },
+        { label: "Body", name: "body", widget: "markdown" },
+      ]
+    },
+    {
       name: "posts",
       label: "Posts",
       folder: "content/posts/",
