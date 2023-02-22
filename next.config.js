@@ -16,6 +16,14 @@ module.exports = ({
     return config;
   },
   images: {
+    images: {
+      formats: [
+        'image/avif',
+        'image/webp',
+        'image/jpeg',
+        'image/png'
+      ]
+    },
     remotePatterns: [
       {
         protocol: 'https',
