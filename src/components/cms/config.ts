@@ -8,6 +8,7 @@ const config: Config = {
     {
       name: "config",
       label: "Config",
+      icon: "settings",
       delete: false,
       editor: { preview: false },
       files: [
@@ -36,6 +37,7 @@ const config: Config = {
     {
       name: "meta",
       label: "Meta",
+      icon: "cube",
       delete: false,
       editor: { preview: false },
       files: [
@@ -81,6 +83,7 @@ const config: Config = {
     {
       name: 'members',
       label: 'Members',
+      icon: "users",
       files: [
         {
           name: 'members',
@@ -106,6 +109,7 @@ const config: Config = {
     {
       name: "events",
       label: "Events",
+      icon: "calender",
       files: [
         {
           name: 'events',

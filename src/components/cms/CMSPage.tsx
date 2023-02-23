@@ -5,6 +5,12 @@ import config from "./config";
 
 import type { TemplatePreviewProps } from "@staticcms/core";
 import type { FC } from "react";
+import { CalendarDaysIcon, Cog6ToothIcon, CubeIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+
+CMS.registerIcon('settings', () => <Cog6ToothIcon />)
+CMS.registerIcon('cube', () => <CubeIcon />)
+CMS.registerIcon('users', () => <UserGroupIcon />)
+CMS.registerIcon('calender', () => <CalendarDaysIcon />)
 
 interface PostData {
   title: string;
