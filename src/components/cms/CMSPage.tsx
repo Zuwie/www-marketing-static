@@ -30,11 +30,11 @@ const CMSPage = () => {
 
     CMS.registerPreviewTemplate("posts", PostPreview);
 
-    CMS.registerAdditionalLink({
-      id: "external-link",
-      title: "External link",
-      data: "https://example.com/",
-    });
+    // CMS.registerAdditionalLink({
+    //   id: "external-link",
+    //   title: "External link",
+    //   data: "https://example.com/",
+    // });
 
     CMS.init({ config });
   }, []);
