@@ -5,15 +5,15 @@ import { CalendarIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { IEvent } from "@/src/pages/events/model";
 import ReactMarkdown from "react-markdown";
 
-export default function Event({name, date, body, address, banner}: IEvent) {
+export default function Event({data}: {data: IEvent}) {
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-lg shadow-lg${isInThePast(date) ? " opacity-70" : ""}`}>
+      className={`flex flex-col overflow-hidden rounded-lg shadow-lg${isInThePast(data.date) ? " opacity-70" : ""}`}>
       <div className="flex-shrink-0 relative h-48">
         <Image
           fill
           className="h-48 w-full object-cover"
-          src={banner}
+          src={data.banner}
           alt=""
         />
       </div>
@@ -22,7 +22,7 @@ export default function Event({name, date, body, address, banner}: IEvent) {
           <div className="flex gap-1 align-center">
             <CalendarIcon width={24}/>
             <p>
-              {new Date(date).toLocaleDateString("de-DE", {
+              {new Date(data.date).toLocaleDateString("de-DE", {
                 weekday: "long",
                 year: "numeric",
                 month: "numeric",
@@ -33,15 +33,15 @@ export default function Event({name, date, body, address, banner}: IEvent) {
           <div className="flex gap-1 align-center">
             <ClockIcon width={24}/>
             <p>
-              {new Date(date).toLocaleTimeString("de-DE", {hour: "2-digit", minute: "2-digit"})}
+              {new Date(data.date).toLocaleTimeString("de-DE", {hour: "2-digit", minute: "2-digit"})}
             </p>
           </div>
         </div>
         <div className="flex-1">
-          <p className="text-xl font-semibold text-gray-900">{name}</p>
-          <p>{address}</p>
+          <p className="text-xl font-semibold text-gray-900">{data.name}</p>
+          <p>{data.address}</p>
           <ReactMarkdown
-            className="markdown-container mt-3 text-base text-gray-500">{body}</ReactMarkdown>
+            className="markdown-container mt-3 text-base text-gray-500">{data.body}</ReactMarkdown>
         </div>
       </div>
     </div>

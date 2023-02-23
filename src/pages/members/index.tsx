@@ -14,13 +14,13 @@ export async function getStaticProps() {
   }
 }
 
-interface MemberPageProps {
+interface MembersPageProps {
   title: string;
   intro: string;
   member: IMember[];
 }
 
-export default function Index({title, intro, member}: MemberPageProps) {
+export default function Index({title, intro, member}: MembersPageProps) {
   return(
     <>
       <div className="pt-16">
@@ -28,9 +28,7 @@ export default function Index({title, intro, member}: MemberPageProps) {
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="space-y-5 sm:space-y-4">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h2>
-              <p className="text-xl text-gray-500">
-                {intro}
-              </p>
+              <p className="text-xl text-gray-500">{intro}</p>
             </div>
             <div className="lg:col-span-2">
               <ul
