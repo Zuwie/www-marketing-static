@@ -21,7 +21,6 @@ interface EventsPageProps {
 }
 
 export default function Index({title, intro, events}: EventsPageProps) {
-  console.log(events)
   return (
     <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="relative mx-auto max-w-7xl">
