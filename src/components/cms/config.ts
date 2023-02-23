@@ -79,27 +79,13 @@ const config: Config = {
       ],
     },
     {
-      name: "members",
-      label: "Members",
-      folder: "content/members",
-      format: "json",
-      create: true,
-      identifier_field: "name",
-      fields: [
-        { label: "Name", name: "name", widget: "string" },
-        { label: "Role", name: "role", widget: "string" },
-        { label: 'Profile Picture', name: 'profilePicture', hint: 'Im Format (1104 x 560)', widget: 'image' },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
-    },
-    {
-      name: 'pages',
-      label: 'Pages Test',
+      name: 'members',
+      label: 'Members',
       files: [
         {
-          name: 'about',
-          label: 'About Page',
-          file: 'site/content/about.yml',
+          name: 'members',
+          label: 'Members Page',
+          file: 'content/members.yml',
           fields: [
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
@@ -108,9 +94,10 @@ const config: Config = {
               label: 'Team',
               widget: 'list',
               fields: [
-                { name: 'name', label: 'Name', widget: 'string' },
-                { name: 'position', label: 'Position', widget: 'string' },
-                { name: 'photo', label: 'Photo', widget: 'image' },
+                { label: "Name", name: "name", widget: "string" },
+                { label: "Role", name: "role", widget: "string" },
+                { label: 'Profile Picture', name: 'profilePicture', widget: 'image' },
+                { label: "Body", name: "body", widget: "markdown" },
               ],
             },
           ],
@@ -119,19 +106,31 @@ const config: Config = {
     {
       name: "events",
       label: "Events",
-      folder: "content/events",
-      format: "json",
-      create: true,
-      identifier_field: "title",
-      fields: [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Address", name: "address", widget: "string" },
-        {label: "Date", name: "date", widget: "datetime"},
-        { label: 'Banner', name: 'banner', hint: 'Im Format (1104 x 560)', widget: 'image' },
-        { label: "Body", name: "body", widget: "markdown" },
-      ]
+      files: [
+        {
+          name: 'events',
+          label: 'Events Page',
+          file: 'content/events.yml',
+          fields: [
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {
+              name: 'events',
+              label: 'Events',
+              widget: 'list',
+              fields: [
+                { label: "Name", name: "name", widget: "string" },
+                { label: "Address", name: "address", widget: "string" },
+                { label: "Date", name: "date", widget: "datetime" },
+                { label: 'Banner', name: 'banner', widget: 'image' },
+                { label: "Body", name: "body", widget: "markdown" },
+              ],
+            },
+          ],
+        }],
     },
     {
+      hide: true,
       name: "posts",
       label: "Posts",
       folder: "content/posts/",

@@ -5,7 +5,7 @@ import { CalendarIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { IEvent } from "@/src/pages/events/model";
 import ReactMarkdown from "react-markdown";
 
-export default function Event({title, date, body, address, banner}: IEvent) {
+export default function Event({name, date, body, address, banner}: IEvent) {
   return (
     <div
       className={`flex flex-col overflow-hidden rounded-lg shadow-lg${isInThePast(date) ? " opacity-70" : ""}`}>
@@ -38,7 +38,7 @@ export default function Event({title, date, body, address, banner}: IEvent) {
           </div>
         </div>
         <div className="flex-1">
-          <p className="text-xl font-semibold text-gray-900">{title}</p>
+          <p className="text-xl font-semibold text-gray-900">{name}</p>
           <p>{address}</p>
           <ReactMarkdown
             className="markdown-container mt-3 text-base text-gray-500">{body}</ReactMarkdown>
