@@ -93,6 +93,45 @@ const config: Config = {
       ]
     },
     {
+      name: 'pages',
+      label: 'Pages Test',
+      files: [
+        {
+          name: 'about',
+          label: 'About Page',
+          file: 'site/content/about.yml',
+          fields: [
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {
+              name: 'team',
+              label: 'Team',
+              widget: 'list',
+              fields: [
+                { name: 'name', label: 'Name', widget: 'string' },
+                { name: 'position', label: 'Position', widget: 'string' },
+                { name: 'photo', label: 'Photo', widget: 'image' },
+              ],
+            },
+          ],
+        }],
+    },
+    {
+      name: "events",
+      label: "Events",
+      folder: "content/events",
+      format: "json",
+      create: true,
+      identifier_field: "title",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Address", name: "address", widget: "string" },
+        {label: "Date", name: "date", widget: "datetime"},
+        { label: 'Banner', name: 'banner', hint: 'Im Format (1104 x 560)', widget: 'image' },
+        { label: "Body", name: "body", widget: "markdown" },
+      ]
+    },
+    {
       name: "posts",
       label: "Posts",
       folder: "content/posts/",
