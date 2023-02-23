@@ -134,6 +134,21 @@ const config: Config = {
         }],
     },
     {
+      name: "contact",
+      label: "Contact",
+      icon: "calender",
+      files: [
+        {
+          name: 'contact',
+          label: 'Contact Page',
+          file: 'content/contact.yml',
+          fields: [
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+          ],
+        }],
+    },
+    {
       hide: true,
       name: "posts",
       label: "Posts",
