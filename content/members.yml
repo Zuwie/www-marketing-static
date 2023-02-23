@@ -1,0 +1,14 @@
+title: Unsere Mitglieder
+intro: |
+  Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue 
+  ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu 
+  faucibus vivamus eget bibendum cras.
+member:
+  - name: Jockl
+    role: Member
+    profilePicture: /images/20220626_131044-min.jpg
+    body: >
+      Praesent pharetra, ante eget iaculis efficitur, tellus purus dignissim
+      nunc, quis blandit mi lectus sit amet nisi. Morbi aliquet pellentesque
+      pretium. Pellentesque dolor dui, vulputate sit amet eros non, sollicitudin
+      suscipit urna. Aenean non sodales nibh.
