@@ -1,30 +1,29 @@
-import path from "path";
-import fs from "fs";
+// import path from "path";
+// import fs from "fs";
 import { IMember } from "@/src/pages/members/model";
 import Member from "@/src/components/Member";
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), "content/members");
-  const fileNames = fs.readdirSync(postsDirectory);
+  // const membersDirectory = path.join(process.cwd(), "content/members");
+  // const fileNames = fs.readdirSync(membersDirectory);
 
-  const fileData = fileNames
-    .filter((it) => it.endsWith(".json"))
-    .map((fileName) => {
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-
-      return JSON.parse(fileContents)
-    });
+  // const fileData = fileNames
+  //   .filter((it) => it.endsWith(".json"))
+  //   .map((fileName) => {
+  //     const fullPath = path.join(membersDirectory, fileName);
+  //     const fileContents = fs.readFileSync(fullPath, "utf8");
+  //
+  //     return JSON.parse(fileContents)
+  //   });
 
   return {
     props: {
-      data: fileData,
+      data: [],
     }
   }
 }
 
 export default function Index({data}) {
-
   return(
     <>
       <div className="pt-16">
@@ -42,7 +41,7 @@ export default function Index({data}) {
                 role="list"
                 className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
               >
-                {data && data.map((data: IMember) => (
+                {data.length > 0 && data.map((data: IMember) => (
                   <li key={data.name}>
                     <Member data={data}/>
                   </li>
