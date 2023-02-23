@@ -4,4 +4,5 @@ export interface IEvent {
   body: string;
   address: string;
   banner: string;
+  tag: string;
 }
