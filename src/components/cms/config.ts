@@ -90,8 +90,8 @@ const config: Config = {
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
             {
-              name: 'team',
-              label: 'Team',
+              name: 'member',
+              label: 'Member',
               widget: 'list',
               fields: [
                 { label: "Name", name: "name", widget: "string" },
