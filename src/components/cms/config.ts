@@ -138,6 +138,7 @@ const config: Config = {
                   value_field: "tags.*.slug",
                 },
                 { label: "Body", name: "body", widget: "markdown" },
+                { label: "Details", name: "details", widget: "markdown", hint: "Der Inhalt wird im Modal angezeigt wenn auf ein Event geklickt wird." }
               ],
             },
           ],
