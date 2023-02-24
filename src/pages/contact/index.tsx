@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs";
 import yaml from "js-yaml";
+import { WEB3FORMS_KEY } from "@/src/constants";
 
 export async function getStaticProps() {
   const membersFile = path.join(process.cwd(), "content/contact.yml");
@@ -70,7 +71,12 @@ export default function Index({title, intro}: ContactPageProps) {
           <p className="mt-4 text-lg leading-6 text-gray-500">{intro}</p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+            <input type="hidden" name="from_name" value="Your Website Name" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" className="hidden" />
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name

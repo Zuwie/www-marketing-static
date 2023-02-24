@@ -2,6 +2,8 @@ export const COMPANY = {
   NAME: 'Wiener Würfel Wappler'
 }
 
+export const WEB3FORMS_KEY = "15554bb9-29c7-40dc-90ad-e4a654df9a42"
+
 export const ROUTES = {
   WAPPLER: '/members',
   EVENTS: '/events',
