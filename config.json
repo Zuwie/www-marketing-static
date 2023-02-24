@@ -1,20 +1,11 @@
 {
   "base_url": "https://earnest-lollipop-61838c.netlify.app",
-  "site_title": "Next.js Static CMS Blog",
-  "site_description": "Next.js blog template for Static CMS on Netlify",
+  "site_title": "Wiener Würfel Wappler",
+  "site_description": "Wiener Tabletop Club",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Static CMS"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
+    "Warhammer",
+    "Age of Sigmar",
+    "40K"
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
