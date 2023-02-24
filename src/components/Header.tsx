@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { COMPANY, MAIN_NAVIGATION } from "@/src/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 function LogoLink() {
   return (
@@ -17,8 +18,13 @@ function LogoLink() {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
   const pathName = usePathname()
   const isRoot = pathName === '/'
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+  }, [router.query]);
 
   return (
     <div className={"px-6 lg:px-8" + (isRoot ? ' absolute top-0 left-0 w-full z-10' : '')}>
