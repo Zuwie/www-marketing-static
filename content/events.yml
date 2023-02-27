@@ -1,7 +1,7 @@
 title: Unsere Events
 intro: >
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-  labore natus atque, ducimus sed.
+  Hier findet ihr unsere anstehenden und vergangenen Events - Come join us
+  at the Table  
 events:
   - date: 2023-04-06T08:45:42+02:00
     name: Wappler Spring Bash
@@ -18,3 +18,5 @@ events:
 
 
     tag: aos
+    details: |
+      Mehr Infos in Kürze…
