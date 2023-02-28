@@ -9,10 +9,10 @@ export default function Event({data}: {data: IEvent}) {
   return (
     <div
       className={`flex flex-col overflow-hidden rounded-lg shadow-lg${isInThePast(data.date) ? " opacity-70" : ""}`}>
-      <div className="flex-shrink-0 relative h-48">
+      <div className="flex-shrink-0 relative h-56">
         <Image
           fill
-          className="h-48 w-full object-cover"
+          className="h-fit w-full object-cover"
           src={data.banner}
           alt=""
         />
