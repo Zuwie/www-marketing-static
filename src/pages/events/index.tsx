@@ -1,14 +1,9 @@
-import path from "path";
-import fs from "fs";
-import yaml from "js-yaml";
 import { IEvent } from "@/src/pages/events/model";
 import Event from "@/src/components/Event";
+import { getFileContent } from "@/src/lib/server";
 
 export async function getStaticProps() {
-  const membersFile = path.join(process.cwd(), "content/events.yml");
-  const fileContents = fs.readFileSync(membersFile, 'utf8');
-  const data = yaml.load(fileContents)
-
+  const data = getFileContent("content/events.yml")
   return {
     props: JSON.parse(JSON.stringify(data))
   }

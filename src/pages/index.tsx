@@ -5,8 +5,8 @@ import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { Hero } from "../components/Hero";
 import About from "../components/About";
-import { getFileContent } from "@/src/lib/helpers";
 import AboutSecond from "@/src/components/AboutSecond";
+import { getFileContent } from "@/src/lib/server";
 
 interface LandingPageProps {
   hero: {

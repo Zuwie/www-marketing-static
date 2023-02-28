@@ -1,13 +1,9 @@
-import path from "path";
-import fs from "fs";
 import { IMember } from "@/src/pages/members/model";
 import Member from "@/src/components/Member";
-import yaml from "js-yaml";
+import { getFileContent } from "@/src/lib/server";
 
 export async function getStaticProps() {
-  const membersFile = path.join(process.cwd(), "content/members.yml");
-  const fileContents = fs.readFileSync(membersFile, 'utf8');
-  const data = yaml.load(fileContents)
+  const data = getFileContent("content/members.yml")
 
   return {
     props: data
