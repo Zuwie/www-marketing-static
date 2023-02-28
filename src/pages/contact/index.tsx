@@ -2,6 +2,7 @@ import path from "path";
 import fs from "fs";
 import yaml from "js-yaml";
 import { WEB3FORMS_KEY } from "@/src/constants";
+import ReactMarkdown from "react-markdown";
 
 export async function getStaticProps() {
   const membersFile = path.join(process.cwd(), "content/contact.yml");
@@ -68,7 +69,9 @@ export default function Index({title, intro}: ContactPageProps) {
         </svg>
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h2>
-          <p className="mt-4 text-lg leading-6 text-gray-500">{intro}</p>
+          <div className="mt-4 text-lg leading-6 text-gray-500">
+            <ReactMarkdown>{intro}</ReactMarkdown>
+          </div>
         </div>
         <div className="mt-12">
           <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
@@ -117,6 +120,22 @@ export default function Index({title, intro}: ContactPageProps) {
                   className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   defaultValue={''}
                 />
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label htmlFor="file" className="block text-sm font-medium text-gray-700">
+                Armee-Liste
+              </label>
+              <div className="mt-1">
+                <input
+                  id="file"
+                  name="file"
+                  type="file"
+                  accept="application/pdf"
+                  className="block w-full shadow-sm focus:border-indigo-500 focus:ring-indigo-500 cursor-pointer"
+                />
+                  <p className="mt-1 text-sm text-gray-600" id="file_input_help">Nur PDF erlaubt</p>
               </div>
             </div>
             <div className="sm:col-span-2">
