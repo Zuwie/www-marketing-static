@@ -80,6 +80,63 @@ const config: Config = {
       ],
     },
     {
+      name: 'home',
+      label: 'Home',
+      icon: 'home',
+      files: [
+        {
+          name: 'hero',
+          label: 'Hero',
+          file: 'content/hero.yml',
+          fields: [
+            { name: 'banner', label: 'Banner', widget: 'image', hint: '2830×1857 or similar. Keep file-size small (~50kb)' },
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+          ]
+        },
+        {
+          name: 'firstSection',
+          label: 'First Section',
+          file: 'content/landing_first.yml',
+          fields: [
+            { name: 'image', label: 'Image', widget: 'image' },
+            { name: 'subTitle', label: 'Subtitle', widget: 'string' },
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {
+              name: 'list',
+              label: 'List',
+              widget: 'list',
+              fields: [
+                { name: 'title', label: 'Title', widget: 'string' },
+                { name: 'body', label: 'Body', widget: 'string' },
+              ]
+            }
+          ]
+        },
+        {
+          name: 'secondSection',
+          label: 'Second Section',
+          file: 'content/landing_second.yml',
+          fields: [
+            { name: 'image', label: 'Image', widget: 'image' },
+            { name: 'subTitle', label: 'Subtitle', widget: 'string' },
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {
+              name: 'list',
+              label: 'List',
+              widget: 'list',
+              fields: [
+                { name: 'title', label: 'Title', widget: 'string' },
+                { name: 'body', label: 'Body', widget: 'string' },
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       name: 'members',
       label: 'Members',
       icon: "users",
