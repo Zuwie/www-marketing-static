@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { COMPANY, ROUTES } from "../constants";
+import { ROUTES } from "../constants";
 import Image from "next/image";
 
-export function Hero() {
+export function Hero({banner, title, intro}) {
   return <div className="relative isolate overflow-hidden bg-gray-900">
     {/* Background */}
     <Image
       fill
-      src="/images/hero.avif"
+      src={banner}
       alt=""
       className="absolute inset-0 -z-10 h-full w-full object-cover"
     />
@@ -17,11 +17,10 @@ export function Hero() {
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white sm:text-6xl">
-            {COMPANY.NAME}
+            {title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+            {intro}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link

@@ -1,13 +1,13 @@
-import { ServerIcon } from '@heroicons/react/20/solid'
 import Image from "next/image";
+import { ServerIcon } from "@heroicons/react/24/outline";
 
-export default function About({image, subTitle, title, intro, list}) {
+export default function AboutSecond({image, subTitle, title, intro, list}) {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
-          <div className="px-6 md:px-0 lg:pt-4 lg:pr-4">
-            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="lg:ml-auto lg:pt-4 lg:pl-4">
+            <div className="lg:max-w-lg">
               <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">{subTitle}</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">{intro}</p>
@@ -23,7 +23,7 @@ export default function About({image, subTitle, title, intro, list}) {
               </dl>
             </div>
           </div>
-          <div className="flex items-start justify-end">
+          <div className="flex items-start justify-end lg:order-first">
             <Image
               src={image}
               alt=""
