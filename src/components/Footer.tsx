@@ -65,7 +65,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-sm leading-5 text-gray-500">
-          &copy; <a className="hover:underline" href="https://www.rs-webdev.com" target='_blank' rel="noreferrer">{`${new Date().getFullYear()} rs-webdev`}</a>
+          &copy; <a className="text-inherit hover:underline" href="https://www.rs-webdev.com" target='_blank' rel="noreferrer">{`${new Date().getFullYear()} rs-webdev`}</a>
         </p>
       </div>
     </footer>
