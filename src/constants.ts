@@ -1,5 +1,6 @@
 export const COMPANY = {
-  NAME: 'Wiener Würfel Wappler'
+  NAME: 'Wiener Würfel Wappler',
+  DISCORD: 'https://discord.gg/YkXFvfwKRH'
 }
 
 export const WEB3FORMS_KEY = "15554bb9-29c7-40dc-90ad-e4a654df9a42"
