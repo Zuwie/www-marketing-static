@@ -1,10 +1,12 @@
 image: /images/20230202_185216.jpg
-subTitle: Lorem ipsum
-title: Lorem ipsum dolor sit amet
-intro: |
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores 
-  impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis 
-  ratione.
+subTitle: "Wiener Würfel Wappler "
+title: "Wir über uns:"
+intro: >
+  Wir sind eine Gruppe von Tabletopenthusiasten die sich regelmäßig zum
+  spielen Treffen.
+
+
+  Uns gibts seit Anfang Anfang 2022 - Ihr wollts dabei sein und uns kennenlernen - Nutzt das Kontaktformular oder kommt auf den Battle of Austria Discord - Weitere Infos unter Kontakt
 list:
   - title: Push to deploy.
     body: "    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
