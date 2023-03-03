@@ -1,11 +1,10 @@
 image: /images/20230202_185221.jpg
-subTitle: Lorem ipsum
-title: Lorem ipsum dolor sit
-intro: |
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores 
-  impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis 
-  ratione.
+subTitle: Club & Eventorganisation
+title: Clubabend - für Gäste offen
+intro: >
+  Wöchentlicher Clubabend - Weitere Infos auf dem Discord Server - Battle
+  for Austria. Weiteres dazu findet ihr unter Kontakt. 
 list:
-  - title: Push to deploy.
-    body: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
-      perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+  - title: Info
+    body: 1060 Wien - Schmalzhofgasse 8 gegenüber - jeden Donnerstag von 17:00 -
+      22:00
