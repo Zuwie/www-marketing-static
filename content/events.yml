@@ -129,7 +129,7 @@ events:
   - date: 2023-01-01T20:00:20+01:00
     name: Supernova Escalation Liga
     address: "Clubkeller - Schmalzhofgasse 8 "
-    banner: /images/logo-lang-escalation-blue.jpg
+    banner: /images/logo-lang-escalation-solo.jpg
     tag: 40k
     body: >
       **Laufendes Event - Liga**
