@@ -41,3 +41,9 @@ member:
     profilePicture: /images/jj.jpg
     body: |
       Wappler seit erster Stunde - unsere Blood Bowl Elite
+  - name: Chris - Rem
+    body: >
+      Wappler der fünften Stunde - Master of Ceremony und notorischer
+      Prokastinator mit Hang zur Dramatik; will nur spielen.
+    role: Member
+    profilePicture: /images/rem
