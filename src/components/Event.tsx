@@ -49,7 +49,7 @@ export default function Event({data}: {data: IEvent}) {
           <p className="text-xl font-semibold text-gray-900">{data.name}</p>
           <p>{data.address}</p>
           <ReactMarkdown
-            className="markdown-container mt-3 text-base text-gray-500">{data.body}</ReactMarkdown>
+            className="markdown-container mt-3 text-base text-gray-700">{data.body}</ReactMarkdown>
         </div>
       </div>
     </div>
