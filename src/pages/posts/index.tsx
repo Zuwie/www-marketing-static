@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import Layout from "../../components/Layout";
 import BasicMeta from "../../components/meta/BasicMeta";
 import OpenGraphMeta from "../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../components/meta/TwitterCardMeta";
@@ -16,18 +15,6 @@ type Props = {
     pages: number;
   };
 };
-export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
-  const title = "All posts";
-  return (
-    <Layout>
-      <BasicMeta url={url} title={title} />
-      <OpenGraphMeta url={url} title={title} />
-      <TwitterCardMeta url={url} title={title} />
-      <PostList posts={posts} tags={tags} pagination={pagination} />
-    </Layout>
-  );
-}
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = listPostContent(1, config.posts_per_page);
@@ -44,3 +31,19 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+export default function Index({ posts, tags, pagination }: Props) {
+  const url = "/posts";
+  const title = "All posts";
+  return (
+    <>
+      <BasicMeta url={url} title={title} />
+      <OpenGraphMeta url={url} title={title} />
+      <TwitterCardMeta url={url} title={title} />
+
+      <PostList posts={posts} tags={tags} pagination={pagination} />
+    </>
+  );
+}
+
+

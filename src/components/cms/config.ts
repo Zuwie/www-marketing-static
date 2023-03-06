@@ -53,7 +53,8 @@ const config: Config = {
               widget: "list",
               fields: [
                 { label: "Slug", name: "slug", widget: "string", hint: "The part of a URL identifies the author" },
-                { label: "Name", name: "name", widget: "string", hint: "First and Last" },
+                { label: "Name", name: "name", widget: "string", hint: "Vor- & Nachname" },
+                { label: "Image", name: "image", widget: "image" },
                 { label: "Introduction", name: "introduction", widget: "text" },
               ],
             },
@@ -217,7 +218,6 @@ const config: Config = {
         }],
     },
     {
-      hide: true,
       name: "posts",
       label: "Posts",
       folder: "content/posts/",
@@ -230,6 +230,7 @@ const config: Config = {
       fields: [
         { label: "Slug", name: "slug", widget: "string" },
         { label: "Title", name: "title", widget: "string" },
+        { label: "Banner", name: "banner", widget: "image" },
         {
           label: "Publish Date",
           name: "date",
