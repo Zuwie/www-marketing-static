@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 export default function Event({data}: {data: IEvent}) {
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-lg shadow-lg${isInThePast(data.dateEnd || data.date) ? " opacity-70" : ""}`}>
+      className={`flex flex-col overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all ${isInThePast(data.dateEnd || data.date) ? "opacity-70" : ""}`}>
       <div className="flex-shrink-0 relative h-56">
         <Image
           fill
