@@ -179,9 +179,10 @@ const config: Config = {
               label: 'Events',
               widget: 'list',
               fields: [
-                { label: "Name", name: "name", widget: "string" },
-                { label: "Address", name: "address", widget: "string" },
-                { label: "Date", name: "date", widget: "datetime" },
+                { label: "Name", name: "name", widget: "string", required: true },
+                { label: "Address", name: "address", widget: "string", required: true },
+                { label: "Date", name: "date", widget: "datetime", required: true },
+                { label: "End-Date", name: "dateEnd", widget: "datetime", hint: "Optional zu setzen wenn das Event mehrere Tage geht." },
                 { label: 'Banner', name: 'banner', widget: 'image' },
                 {
                   label: "Tag",
@@ -193,7 +194,7 @@ const config: Config = {
                   display_fields: ["tags.*.name"],
                   value_field: "tags.*.slug",
                 },
-                { label: "Body", name: "body", widget: "markdown" },
+                { label: "Body", name: "body", widget: "markdown", required: true },
                 { label: "Details", name: "details", widget: "markdown", hint: "Der Inhalt wird im Modal angezeigt wenn auf ein Event geklickt wird." }
               ],
             },
