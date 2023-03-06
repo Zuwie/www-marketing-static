@@ -42,10 +42,10 @@ p a {
   @apply text-indigo-500 hover:underline
 }
 
-.hero {
+.__hero {
   @apply relative isolate overflow-hidden bg-gray-900
 }
-.hero::before {
+.__hero::before {
   content: '';
   @apply w-full h-full absolute left-0 top-0 bg-black opacity-60;
 }

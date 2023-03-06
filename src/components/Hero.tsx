@@ -3,7 +3,7 @@ import { ROUTES } from "../constants";
 import Image from "next/image";
 
 export function Hero({banner, title, intro}) {
-  return <div className="hero">
+  return <div className="__hero">
     {/* Background */}
     <Image
       fill
