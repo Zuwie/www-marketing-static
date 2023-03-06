@@ -1,7 +1,7 @@
 import React from "react";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
-import TagLink from "./TagLink";
+// import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
 
@@ -13,7 +13,7 @@ type Props = {
     pages: number;
   };
 };
-export default function PostList({posts, tags, pagination}: Props) {
+export default function PostList({posts, pagination}: Props) {
   console.log(posts)
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -25,13 +25,13 @@ export default function PostList({posts, tags, pagination}: Props) {
           </p>
         </div>
 
-        <ul className="flex gap-2">
-          {tags.map((it) => (
-            <li key={it.slug}>
-              <TagLink tag={it} />
-            </li>
-          ))}
-        </ul>
+        {/*<ul className="flex gap-2">*/}
+        {/*  {tags.map((it) => (*/}
+        {/*    <li key={it.slug}>*/}
+        {/*      <TagLink tag={it} />*/}
+        {/*    </li>*/}
+        {/*  ))}*/}
+        {/*</ul>*/}
 
         <ul
           className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
