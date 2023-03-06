@@ -1,7 +1,7 @@
 title: Unsere Events
 intro: >
   Hier findet ihr unsere anstehenden und vergangenen Events - Come join us
-  at the Table  
+  at the Table
 events:
   - date: 2023-04-16T08:45:42+02:00
     name: Wappler Spring Bash
@@ -127,6 +127,7 @@ events:
     details: |
       Mehr Infos in Kürze…
   - date: 2023-01-01T20:00:20+01:00
+    dateEnd: 2023-08-01T20:00:20+01:00
     name: Supernova Escalation Liga
     address: "Clubkeller - Schmalzhofgasse 8 "
     banner: /images/logo-lang-escalation-solo.jpg

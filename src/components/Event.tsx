@@ -19,19 +19,27 @@ export default function Event({data}: {data: IEvent}) {
       </div>
       <div className="flex flex-1 flex-col justify-between bg-white p-6">
         <div className="flex gap-4 justify-between align-center py-2 mb-4 text-gray-700 border-b-2 border-b-gray-700">
-          <div className="flex gap-1 align-center">
-            <CalendarIcon width={24}/>
+          <div className="flex gap-1">
+            <CalendarIcon width={24} className="self-start" />
             <p>
               {new Date(data.date).toLocaleDateString("de-DE", {
-                weekday: "long",
+                weekday: "short",
                 year: "numeric",
                 month: "numeric",
                 day: "numeric"
               })}
+
+              {data.dateEnd && (
+                <span> - {new Date(data.dateEnd).toLocaleDateString("de-DE", {
+                  year: "numeric",
+                  month: "numeric",
+                  day: "numeric"
+                })}</span>
+              )}
             </p>
           </div>
-          <div className="flex gap-1 align-center">
-            <ClockIcon width={24}/>
+          <div className="flex gap-1">
+            <ClockIcon width={24} className="self-start" />
             <p>
               {new Date(data.date).toLocaleTimeString("de-DE", {hour: "2-digit", minute: "2-digit"})}
             </p>
