@@ -62,11 +62,13 @@ export default function PostLayout({
           <Link href={ROUTES.BLOG} className="flex gap-1 text-indigo-600 items-center"><ArrowLongLeftIcon width={24} /> Zurück</Link>
           <article>
             <header className="text-center">
-              <div className="text-base font-semibold leading-7 text-indigo-600">{tags.map((tag) => (
-                <span>
-                  {tag}
-                </span>
-              ))}</div>
+              <div className="text-base font-semibold leading-7 text-indigo-600">
+                {tags.map((tag) => (
+                  <span key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h1>
             </header>
 
