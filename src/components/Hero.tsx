@@ -3,7 +3,7 @@ import { ROUTES } from "../constants";
 import Image from "next/image";
 
 export function Hero({banner, title, intro}) {
-  return <div className="relative isolate overflow-hidden bg-gray-900">
+  return <div className="hero">
     {/* Background */}
     <Image
       fill
@@ -12,7 +12,7 @@ export function Hero({banner, title, intro}) {
       className="absolute inset-0 -z-10 h-full w-full object-cover"
     />
 
-    <div className="px-6 lg:px-8">
+    <div className="px-6 lg:px-8 relative">
       {/* Middle */}
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
