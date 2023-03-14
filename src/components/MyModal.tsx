@@ -1,8 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import ReactMarkdown from "react-markdown";
 
-export default function MyModal({button, title, details}) {
+export default function MyModal({button, title, children}) {
   let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
@@ -50,15 +49,16 @@ export default function MyModal({button, title, details}) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-4xl font-bold leading-6 text-gray-900"
                   >
                     {title}
                   </Dialog.Title>
+
                   <div className="mt-6 text-base">
-                    <ReactMarkdown>{details}</ReactMarkdown>
+                    {children}
                   </div>
 
                   <div className="mt-8">
