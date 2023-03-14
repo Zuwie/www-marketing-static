@@ -35,11 +35,11 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
+            <Bars3Icon className={"h-6 w-6" + (isRoot ? ' text-white' : '')} aria-hidden="true"/>
           </button>
         </div>
         <ul className="hidden lg:flex lg:gap-x-12">
@@ -61,11 +61,11 @@ export default function Header() {
             <LogoLink/>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-400"
+              className="-m-2.5 rounded-md p-2.5 text-gray-400 text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
+              <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true"/>
             </button>
           </div>
           <div className="mt-6 flow-root">
