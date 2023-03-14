@@ -1,4 +1,8 @@
 image: /images/webseite-jpg-small.jpg
+images:
+  - /images/header-website.jpg
+  - /images/header-doppelt.jpg
+  - /images/markus.jpg
 subTitle: "Wiener Würfel Wappler "
 title: "Wir über uns:"
 intro: >
