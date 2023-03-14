@@ -215,6 +215,7 @@ const config: Config = {
                   label: 'Images',
                   widget: 'list',
                   hint: 'Wird im Modal angezeigt',
+                  required: false,
                   fields: [
                     { name: 'image', label: 'Image', widget: 'image' },
                     { name: 'alt', label: 'Alt Text', widget: 'string' }
