@@ -1,7 +1,6 @@
 import { ServerIcon } from '@heroicons/react/20/solid'
-import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import OptionalSlider from "@/src/components/OptionalSlider";
 
 export default function About({images, subTitle, title, intro, list}) {
   return (
@@ -29,27 +28,7 @@ export default function About({images, subTitle, title, intro, list}) {
             </div>
           </div>
           <div className="flex items-start justify-end rounded-xl shadow-xl ring-1 ring-gray-400/10">
-            {images.length === 1 ? (
-              <Image
-                src={images[0]}
-                alt=""
-                width={640}
-                height={640}
-              />
-            ) : (
-              <Splide aria-label="My Favorite Images">
-                {images.map((image) => (
-                  <SplideSlide key={image}>
-                    <Image
-                      src={image}
-                      alt=""
-                      width={640}
-                      height={640}
-                    />
-                  </SplideSlide>
-                ))}
-              </Splide>
-            )}
+            <OptionalSlider images={images} />
           </div>
         </div>
       </div>
