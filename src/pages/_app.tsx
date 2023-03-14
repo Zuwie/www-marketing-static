@@ -3,6 +3,8 @@ import { AppProps } from "next/app";
 // They are used by the Static CMS preview feature.
 import "../../public/styles/global.css";
 import Layout from "@/src/components/Layout";
+// Default theme
+import '@splidejs/react-splide/css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

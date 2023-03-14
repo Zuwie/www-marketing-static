@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { ServerIcon } from "@heroicons/react/24/outline";
 import ReactMarkdown from "react-markdown";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function AboutSecond({image, subTitle, title, intro, list}) {
+export default function AboutSecond({images, subTitle, title, intro, list}) {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -26,14 +27,28 @@ export default function AboutSecond({image, subTitle, title, intro, list}) {
               </dl>
             </div>
           </div>
-          <div className="flex items-start justify-end lg:order-first">
-            <Image
-              src={image}
-              alt=""
-              className="rounded-xl shadow-xl ring-1 ring-gray-400/10"
-              width={640}
-              height={640}
-            />
+          <div className="flex items-start justify-end lg:order-first rounded-xl shadow-xl ring-1 ring-gray-400/10">
+            {images.length === 1 ? (
+              <Image
+                src={images[0]}
+                alt=""
+                width={640}
+                height={640}
+              />
+            ) : (
+              <Splide aria-label="My Favorite Images">
+                {images.map((image) => (
+                  <SplideSlide key={image}>
+                    <Image
+                      src={image}
+                      alt=""
+                      width={640}
+                      height={640}
+                    />
+                  </SplideSlide>
+                ))}
+              </Splide>
+            )}
           </div>
         </div>
       </div>

@@ -100,7 +100,13 @@ const config: Config = {
           label: 'First Section',
           file: 'content/landing_first.yml',
           fields: [
-            { name: 'image', label: 'Image', widget: 'image' },
+            {
+              name: 'images',
+              label: 'Images',
+              widget: 'list',
+              fields: [
+                { name: 'image', label: 'Image', widget: 'image' },
+              ]},
             { name: 'subTitle', label: 'Subtitle', widget: 'string' },
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
@@ -120,7 +126,14 @@ const config: Config = {
           label: 'Second Section',
           file: 'content/landing_second.yml',
           fields: [
-            { name: 'image', label: 'Image', widget: 'image' },
+            { name: 'image', label: 'Images', widget: 'image'},
+            {
+              name: 'images',
+              label: 'Images',
+              widget: 'list',
+              fields: [
+                { name: 'image', label: 'Image', widget: 'image' },
+              ]},
             { name: 'subTitle', label: 'Subtitle', widget: 'string' },
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
@@ -184,7 +197,7 @@ const config: Config = {
                 { label: "Address", name: "address", widget: "string", required: true },
                 { label: "Date", name: "date", widget: "datetime", required: true },
                 { label: "End-Date", name: "dateEnd", widget: "datetime", hint: "Optional zu setzen wenn das Event mehrere Tage geht." },
-                { label: 'Banner', name: 'banner', widget: 'image' },
+                { label: 'Banner', name: 'banner', widget: 'image', hint: "Wird für die Thumbnail benutzt" },
                 {
                   label: "Tag",
                   name: "tag",
@@ -196,7 +209,16 @@ const config: Config = {
                   value_field: "tags.*.slug",
                 },
                 { label: "Body", name: "body", widget: "markdown", required: true },
-                { label: "Details", name: "details", widget: "markdown", hint: "Der Inhalt wird im Modal angezeigt wenn auf ein Event geklickt wird." }
+                { label: "Details", name: "details", widget: "markdown", hint: "Der Inhalt wird im Modal angezeigt wenn auf ein Event geklickt wird." },
+                {
+                  name: 'images',
+                  label: 'Images',
+                  widget: 'list',
+                  hint: 'Wird im Modal angezeigt',
+                  fields: [
+                    { name: 'image', label: 'Image', widget: 'image' },
+                    { name: 'alt', label: 'Alt Text', widget: 'string' }
+                  ]},
               ],
             },
           ],
@@ -219,7 +241,7 @@ const config: Config = {
     },
     {
       name: "posts",
-      label: "Posts",
+      label: "Blog",
       folder: "content/posts/",
       extension: "mdx",
       format: "frontmatter",

@@ -1,8 +1,9 @@
 import { ServerIcon } from '@heroicons/react/20/solid'
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-export default function About({image, subTitle, title, intro, list}) {
+export default function About({images, subTitle, title, intro, list}) {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
@@ -18,22 +19,37 @@ export default function About({image, subTitle, title, intro, list}) {
                 {list.map((listItem) => (
                   <div key={listItem.title} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <ServerIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
-                    </dt>{' '}
+                      <ServerIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true"/>
+                    </dt>
+                    {' '}
                     <dd className="inline">{listItem.body}</dd>
                   </div>
                 ))}
               </dl>
             </div>
           </div>
-          <div className="flex items-start justify-end">
-            <Image
-              src={image}
-              alt=""
-              className="rounded-xl shadow-xl ring-1 ring-gray-400/10"
-              width={640}
-              height={640}
-            />
+          <div className="flex items-start justify-end rounded-xl shadow-xl ring-1 ring-gray-400/10">
+            {images.length === 1 ? (
+              <Image
+                src={images[0]}
+                alt=""
+                width={640}
+                height={640}
+              />
+            ) : (
+              <Splide aria-label="My Favorite Images">
+                {images.map((image) => (
+                  <SplideSlide key={image}>
+                    <Image
+                      src={image}
+                      alt=""
+                      width={640}
+                      height={640}
+                    />
+                  </SplideSlide>
+                ))}
+              </Splide>
+            )}
           </div>
         </div>
       </div>

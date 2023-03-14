@@ -15,7 +15,7 @@ interface LandingPageProps {
     intro: string;
   },
   firstSection: {
-    image: string;
+    images: string[];
     subTitle: string;
     title: string;
     intro: string;
@@ -24,7 +24,7 @@ interface LandingPageProps {
     ]
   },
   secondSection: {
-    image: string;
+    images: string[];
     subTitle: string;
     title: string;
     intro: string;
