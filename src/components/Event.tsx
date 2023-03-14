@@ -1,6 +1,5 @@
 import { isInThePast } from "@/src/lib/helpers";
 import Image from "next/image";
-// import PlaceHolderImage from "@/public/club_logo.png";
 import { CalendarIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { IEvent } from "@/src/pages/events/model";
 import ReactMarkdown from "react-markdown";

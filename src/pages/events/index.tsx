@@ -2,6 +2,8 @@ import { IEvent } from "@/src/pages/events/model";
 import Event from "@/src/components/Event";
 import { getFileContent } from "@/src/lib/server";
 import MyModal from "@/src/components/MyModal";
+import ReactMarkdown from "react-markdown";
+import OptionalSlider from "@/src/components/OptionalSlider";
 
 export async function getStaticProps() {
   const data = getFileContent("content/events.yml")
@@ -28,8 +30,10 @@ export default function Index({title, intro, events}: EventsPageProps) {
           <ul role="list" className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {events.map((event: IEvent) => (
               <li key={event.name}>
-                <MyModal button={<Event data={event} />} title={event.name} details={event.details} ></MyModal>
-
+                <MyModal button={<Event data={event} />} title={event.name} >
+                  {event.images && <OptionalSlider className="mb-8" images={event.images} />}
+                  <ReactMarkdown>{event.details}</ReactMarkdown>
+                </MyModal>
               </li>
             ))}
           </ul>

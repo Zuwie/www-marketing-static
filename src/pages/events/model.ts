@@ -6,5 +6,6 @@ export interface IEvent {
   details: string;
   address: string;
   banner: string;
+  images: string[];
   tag: string;
 }
