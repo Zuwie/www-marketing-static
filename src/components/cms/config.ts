@@ -218,7 +218,6 @@ const config: Config = {
                   required: false,
                   fields: [
                     { name: 'image', label: 'Image', widget: 'image' },
-                    { name: 'alt', label: 'Alt Text', widget: 'string' }
                   ]},
               ],
             },
