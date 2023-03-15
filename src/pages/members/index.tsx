@@ -1,6 +1,9 @@
 import { IMember } from "@/src/pages/members/model";
 import Member from "@/src/components/Member";
 import { getFileContent } from "@/src/lib/server";
+import BasicMeta from "@/src/components/meta/BasicMeta";
+import OpenGraphMeta from "@/src/components/meta/OpenGraphMeta";
+import TwitterCardMeta from "@/src/components/meta/TwitterCardMeta";
 
 export async function getStaticProps() {
   const data = getFileContent("content/members.yml")
@@ -17,8 +20,13 @@ interface MembersPageProps {
 }
 
 export default function Index({title, intro, member}: MembersPageProps) {
+  const url = "/members";
+
   return(
     <>
+      <BasicMeta url={url} title={title} />
+      <OpenGraphMeta url={url} title={title} />
+      <TwitterCardMeta url={url} title={title} />
       <div className="pt-16">
         <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">

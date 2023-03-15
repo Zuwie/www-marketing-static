@@ -33,13 +33,14 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
-  const title = "All posts";
+  const pageUrl = "/posts";
+  const pageTitle = "Alle Beiträge";
+
   return (
     <>
-      <BasicMeta url={url} title={title} />
-      <OpenGraphMeta url={url} title={title} />
-      <TwitterCardMeta url={url} title={title} />
+      <BasicMeta url={pageUrl} title={pageTitle} />
+      <OpenGraphMeta url={pageUrl} title={pageTitle} />
+      <TwitterCardMeta url={pageUrl} title={pageTitle} />
 
       <PostList posts={posts} tags={tags} pagination={pagination} />
     </>
