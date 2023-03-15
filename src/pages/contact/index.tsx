@@ -121,7 +121,7 @@ export default function Index({title, intro}: ContactPageProps) {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                  Message
+                  Nachricht
                 </label>
                 <div className="mt-1">
                 <textarea
@@ -134,27 +134,27 @@ export default function Index({title, intro}: ContactPageProps) {
                 </div>
               </div>
 
-              <div className="sm:col-span-2">
-                <label htmlFor="file" className="block text-sm font-medium text-gray-700">
-                  Armee-Liste
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="file"
-                    name="file"
-                    type="file"
-                    accept="application/pdf"
-                    className="block w-full shadow-sm focus:border-indigo-500 focus:ring-indigo-500 cursor-pointer"
-                  />
-                  <p className="mt-1 text-sm text-gray-600" id="file_input_help">Nur PDF erlaubt</p>
-                </div>
-              </div>
+              {/*<div className="sm:col-span-2">*/}
+              {/*  <label htmlFor="file" className="block text-sm font-medium text-gray-700">*/}
+              {/*    Armee-Liste*/}
+              {/*  </label>*/}
+              {/*  <div className="mt-1">*/}
+              {/*    <input*/}
+              {/*      id="file"*/}
+              {/*      name="file"*/}
+              {/*      type="file"*/}
+              {/*      accept="application/pdf"*/}
+              {/*      className="block w-full shadow-sm focus:border-indigo-500 focus:ring-indigo-500 cursor-pointer"*/}
+              {/*    />*/}
+              {/*    <p className="mt-1 text-sm text-gray-600" id="file_input_help">Nur PDF erlaubt</p>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
               <div className="sm:col-span-2">
                 <button
                   type="submit"
                   className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
-                  Let&apos;s talk
+                  Absenden
                 </button>
               </div>
             </form>
