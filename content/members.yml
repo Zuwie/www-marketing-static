@@ -3,7 +3,7 @@ intro: >
   Wir sind eine Gruppe hauptsächlich aus Wien, die sich am Tabletop spielen
   erfreuen - Uns gibts seit Anfang 2022, seither Treffen wir uns wöchentlich im
   Herzen Wiens, um gepflegt die Würfel auf die Spielplatte zu schmeißen.
-member:
+members:
   - name: Jockl
     role: Member
     profilePicture: /images/20220626_131044-min.jpg
@@ -19,7 +19,7 @@ member:
     profilePicture: /images/img-20221017-wa0119.jpg
     body: |
       Wappler seit erster Stunde - Papabär 
-      Spielt alles aus Destruction und seit 1988 im Hobby 
+      Spielt alles aus Destruction und seit 1988 im Hobby
   - name: Flo
     role: Member
     body: >
