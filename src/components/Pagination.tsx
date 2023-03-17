@@ -1,5 +1,5 @@
-import { generatePagination } from "../lib/pagination";
 import Link from "next/link";
+import { generatePagination } from "../lib/pagination";
 
 type Props = {
   current: number;
@@ -13,8 +13,8 @@ export default function Pagination({ current, pages, link }: Props) {
   const pagination = generatePagination(current, pages);
   return (
     <ul>
-      {pagination.map((it, i) => (
-        <li key={i}>
+      {pagination.map((it) => (
+        <li key={it.page}>
           {it.excerpt ? (
             "..."
           ) : (

@@ -1,5 +1,5 @@
-import { COMPANY, MAIN_NAVIGATION } from "@/src/constants";
 import { SVGProps } from "react";
+import { COMPANY, MAIN_NAVIGATION } from "@/src/constants";
 
 const navigation = {
   main: MAIN_NAVIGATION,

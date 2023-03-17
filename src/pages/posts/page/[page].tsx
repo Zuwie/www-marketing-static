@@ -1,11 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import { countPosts, listPostContent, PostContent } from "@/src/lib/posts";
+import { listTags, TagContent } from "@/src/lib/tags";
 import BasicMeta from "../../../components/meta/BasicMeta";
 import OpenGraphMeta from "../../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../../components/meta/TwitterCardMeta";
 import PostList from "../../../components/PostList";
 import config from "../../../lib/config";
-import { countPosts, listPostContent, PostContent } from "@/src/lib/posts";
-import { listTags, TagContent } from "@/src/lib/tags";
 
 type Props = {
   posts: PostContent[];
@@ -22,16 +22,19 @@ export default function Page({ posts, tags, pagination, page }: Props) {
 
   return (
     <>
-      <BasicMeta url={pageUrl} title={pageTitle} />
-      <OpenGraphMeta url={pageUrl} title={pageTitle} />
-      <TwitterCardMeta url={pageUrl} title={pageTitle} />
-      <PostList posts={posts} tags={tags} pagination={pagination} />
+      <BasicMeta url={pageUrl} title={pageTitle}/>
+      <OpenGraphMeta url={pageUrl} title={pageTitle}/>
+      <TwitterCardMeta url={pageUrl} title={pageTitle}/>
+      <PostList
+        posts={posts}
+        tags={tags}
+        pagination={pagination}/>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const page = parseInt(params.page as string);
+  const page = parseInt(params.page as string, 10);
   const posts = listPostContent(page, config.posts_per_page);
   const tags = listTags();
   const pagination = {
@@ -54,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { page: (it + 2).toString() },
   }));
   return {
-    paths: paths,
+    paths,
     fallback: false,
   };
 };

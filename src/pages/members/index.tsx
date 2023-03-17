@@ -16,17 +16,17 @@ export async function getStaticProps() {
 interface MembersPageProps {
   title: string;
   intro: string;
-  member: IMember[];
+  members: IMember[];
 }
 
-export default function Index({title, intro, member}: MembersPageProps) {
+export default function Index({title, intro, members}: MembersPageProps) {
   const url = "/members";
 
-  return(
+  return (
     <>
-      <BasicMeta url={url} title={title} />
-      <OpenGraphMeta url={url} title={title} />
-      <TwitterCardMeta url={url} title={title} />
+      <BasicMeta url={url} title={title}/>
+      <OpenGraphMeta url={url} title={title}/>
+      <TwitterCardMeta url={url} title={title}/>
       <div className="pt-16">
         <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
@@ -35,11 +35,9 @@ export default function Index({title, intro, member}: MembersPageProps) {
               <p className="text-xl text-gray-500">{intro}</p>
             </div>
             <div className="lg:col-span-2">
-              <ul
-                role="list"
-                className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
+              <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
               >
-                {member && member.map((member: IMember) => (
+                {members && members.map((member: IMember) => (
                   <li key={member.name}>
                     <Member data={member}/>
                   </li>

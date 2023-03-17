@@ -22,7 +22,7 @@ export default function BasicMeta({
       </title>
       <meta
         name="description"
-        content={description ? description : config.site_description}
+        content={description || config.site_description}
       />
       <meta
         name="keywords"

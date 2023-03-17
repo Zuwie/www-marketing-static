@@ -1,6 +1,6 @@
 import fs from "fs";
-import matter from "gray-matter";
 import path from "path";
+import matter from "gray-matter";
 import yaml from "js-yaml";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
@@ -62,9 +62,9 @@ export function fetchPostContent(): PostContent[] {
   postCache = allPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
-    } else {
-      return -1;
     }
+      return -1;
+
   });
   return postCache;
 }

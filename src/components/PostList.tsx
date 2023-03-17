@@ -1,9 +1,8 @@
-import React from "react";
+import { TagContent } from "@/src/lib/tags";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
-// import TagLink from "./TagLink";
 import Pagination from "./Pagination";
-import { TagContent } from "../lib/tags";
+import TagLink from "./TagLink";
 
 type Props = {
   posts: PostContent[];
@@ -13,7 +12,7 @@ type Props = {
     pages: number;
   };
 };
-export default function PostList({posts, pagination}: Props) {
+export default function PostList({posts, tags, pagination}: Props) {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,19 +23,19 @@ export default function PostList({posts, pagination}: Props) {
           </p>
         </div>
 
-        {/*<ul className="flex gap-2">*/}
-        {/*  {tags.map((it) => (*/}
-        {/*    <li key={it.slug}>*/}
-        {/*      <TagLink tag={it} />*/}
-        {/*    </li>*/}
-        {/*  ))}*/}
-        {/*</ul>*/}
+        <ul className="flex gap-2 hidden">
+          {tags.map((it) => (
+            <li key={it.slug}>
+              <TagLink tag={it}/>
+            </li>
+          ))}
+        </ul>
 
         <ul
           className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <li key={post.slug}>
-              <PostItem post={post} />
+              <PostItem post={post}/>
             </li>
           ))}
         </ul>
@@ -45,7 +44,7 @@ export default function PostList({posts, pagination}: Props) {
           pages={pagination.pages}
           link={{
             href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
-            as: (page) => (page === 1 ? null : "/posts/page/" + page),
+            as: (page) => (page === 1 ? null : `/posts/page/${page}`),
           }}
         />
       </div>

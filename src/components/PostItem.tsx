@@ -1,23 +1,23 @@
-import { PostContent } from "../lib/posts";
 import Link from "next/link";
-import React from "react";
+import { PostContent } from "../lib/posts";
 
 type Props = {
   post: PostContent;
 };
 export default function PostItem({ post }: Props) {
   return (
-    <Link href={"/posts/" + post.slug}>
+    <Link href={`/posts/${post.slug}`}>
       <article
         key={post.slug}
         className="group relative isolate flex flex-col justify-end overflow-hidden shadow-lg hover:shadow-2xl transition-all rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
       >
-        <img src={post.banner} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover transition-all group-hover:scale-105 origin-top-left"/>
+        <img src={post.banner} alt=""
+             className="absolute inset-0 -z-10 h-full w-full object-cover transition-all group-hover:scale-105 origin-top-left"/>
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"/>
         <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"/>
 
         <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-          {/*<Date date={parseISO(post.date)} />*/}
+          {/* <Date date={parseISO(post.date)} /> */}
           {new Date(post.date).toLocaleDateString("de-DE", {
             weekday: "short",
             year: "numeric",

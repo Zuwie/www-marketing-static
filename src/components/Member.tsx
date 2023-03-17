@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
-import { IMember } from "@/src/pages/members/model";
 import Image from "next/image";
+import { IMember } from "@/src/pages/members/model";
 
 export default function Member({data}: {data: IMember}) {
   return (

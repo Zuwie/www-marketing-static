@@ -23,11 +23,11 @@ export default function OpenGraphMeta({
       />
       <meta
         property="og:description"
-        content={description ? description : config.site_description}
+        content={description || config.site_description}
       />
       <meta
         property="og:image"
-        content={image ? image : config.base_url + "/og_image.jpg"}
+        content={image || `${config.base_url}/og_image.jpg`}
       />
       <meta property="og:type" content="article" />
     </Head>

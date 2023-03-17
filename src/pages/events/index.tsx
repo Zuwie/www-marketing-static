@@ -1,8 +1,8 @@
+import ReactMarkdown from "react-markdown";
 import { IEvent } from "@/src/pages/events/model";
 import Event from "@/src/components/Event";
 import { getFileContent } from "@/src/lib/server";
 import MyModal from "@/src/components/MyModal";
-import ReactMarkdown from "react-markdown";
 import OptionalSlider from "@/src/components/OptionalSlider";
 import BasicMeta from "@/src/components/meta/BasicMeta";
 import OpenGraphMeta from "@/src/components/meta/OpenGraphMeta";
@@ -37,7 +37,7 @@ export default function Index({title, intro, events}: EventsPageProps) {
             <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">{intro}</p>
           </div>
           {events && (
-            <ul role="list" className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+            <ul className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
               {events.map((event: IEvent) => (
                 <li key={event.name}>
                   <MyModal button={<Event data={event}/>} title={event.name}>

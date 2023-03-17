@@ -1,15 +1,15 @@
 import React from "react";
+import Link from "next/link";
+import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
+import { ROUTES } from "@/src/constants";
+import { getAuthor } from "../lib/authors";
+import { getTag } from "../lib/tags";
 import Author from "./Author";
 import Date from "./Date";
 import BasicMeta from "./meta/BasicMeta";
 import JsonLdMeta from "./meta/JsonLdMeta";
 import OpenGraphMeta from "./meta/OpenGraphMeta";
 import TwitterCardMeta from "./meta/TwitterCardMeta";
-import { getAuthor } from "../lib/authors";
-import { getTag } from "../lib/tags";
-import Link from "next/link";
-import { ROUTES } from "@/src/constants";
-import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   title: string;
@@ -75,19 +75,19 @@ export default function PostLayout({
             <div className="mt-6">{children}</div>
             <footer className="mt-10 flex gap-4">
               <div>
-                <Date date={date} />
+                <Date date={date}/>
               </div>
               <div>
-                <Author author={getAuthor(author)} />
+                <Author author={getAuthor(author)}/>
               </div>
             </footer>
-            {/*<ul>*/}
-            {/*  {tags.map((it, i) => (*/}
-            {/*    <li key={it[0]}>*/}
-            {/*      <TagButton tag={it[0]} />*/}
-            {/*    </li>*/}
-            {/*  ))}*/}
-            {/*</ul>*/}
+            {/* <ul> */}
+            {/*  {tags.map((it, i) => ( */}
+            {/*    <li key={it[0]}> */}
+            {/*      <TagButton tag={it[0]} /> */}
+            {/*    </li> */}
+            {/*  ))} */}
+            {/* </ul> */}
           </article>
         </div>
       </div>

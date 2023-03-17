@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Script from "next/script";
+import AboutSecond from "@/src/components/AboutSecond";
+import { getFileContent } from "@/src/lib/server";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { Hero } from "../components/Hero";
 import About from "../components/About";
-import AboutSecond from "@/src/components/AboutSecond";
-import { getFileContent } from "@/src/lib/server";
 
 interface LandingPageProps {
   hero: {
@@ -54,12 +54,12 @@ export default function Index({hero, firstSection, secondSection}: LandingPagePr
       <Head>
         <title>Wiener Würfel Wappler</title>
       </Head>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
-      <BasicMeta url={"/"} />
-      <OpenGraphMeta url={"/"} />
-      <TwitterCardMeta url={"/"} />
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async/>
+      <BasicMeta url="/"/>
+      <OpenGraphMeta url="/"/>
+      <TwitterCardMeta url="/"/>
 
-      <Hero banner={hero.banner} title={hero.title} intro={hero.intro} />
+      <Hero banner={hero.banner} title={hero.title} intro={hero.intro}/>
       <About {...firstSection} />
       <AboutSecond {...secondSection} />
     </>

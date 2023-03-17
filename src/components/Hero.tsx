@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ROUTES } from "../constants";
 import Image from "next/image";
+import { ROUTES } from "../constants";
 
 export function Hero({banner, title, intro}) {
   return <div className="__hero">

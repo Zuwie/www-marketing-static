@@ -1,14 +1,14 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import fs from "fs";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
-import { fetchPostContent } from "../../lib/posts";
-import fs from "fs";
 import yaml from "js-yaml";
 import { parseISO } from "date-fns";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 import PostLayout from "../../components/PostLayout";
 
-import type { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
+import { fetchPostContent } from "../../lib/posts";
 
 export type Props = {
   title: string;
@@ -21,13 +21,12 @@ export type Props = {
 };
 
 const slugToPostContent = ((postContents) => {
-  let hash = {};
+  const hash = {};
   postContents.forEach((it) => (hash[it.slug] = it));
   return hash;
 })(fetchPostContent());
 
 export default function Post({ title, dateString, slug, tags, author, description = "", source }: Props) {
-  console.log(source)
   return (
     <PostLayout
       title={title}
@@ -43,7 +42,7 @@ export default function Post({ title, dateString, slug, tags, author, descriptio
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = fetchPostContent().map((it) => "/posts/" + it.slug);
+  const paths = fetchPostContent().map((it) => `/posts/${it.slug}`);
   return {
     paths,
     fallback: false,

@@ -6,15 +6,16 @@ export type AuthorContent = {
   readonly introduction: string;
 };
 
-const authorMap: { [key: string]: AuthorContent } = generateAuthorMap();
-
 function generateAuthorMap(): { [key: string]: AuthorContent } {
-  let result: { [key: string]: AuthorContent } = {};
+  const result: { [key: string]: AuthorContent } = {};
+  // eslint-disable-next-line no-restricted-syntax
   for (const author of authors.authors) {
     result[author.slug] = author;
   }
   return result;
 }
+
+const authorMap: { [key: string]: AuthorContent } = generateAuthorMap();
 
 export function getAuthor(slug: string) {
   return authorMap[slug];

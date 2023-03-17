@@ -1,8 +1,8 @@
 import { BlogPosting } from "schema-dts";
 import { jsonLdScriptProps } from "react-schemaorg";
-import config from "../../lib/config";
 import { formatISO } from "date-fns";
 import Head from "next/head";
+import config from "../../lib/config";
 
 type Props = {
   url: string;
@@ -32,9 +32,9 @@ export default function JsonLdMeta({
           headline: title,
           keywords: keywords ? undefined : keywords.join(","),
           datePublished: formatISO(date),
-          author: author,
-          image: image,
-          description: description,
+          author,
+          image,
+          description,
         })}
       />
     </Head>

@@ -1,5 +1,5 @@
-import config from "../../lib/config";
 import Head from "next/head";
+import config from "../../lib/config";
 
 type Props = {
   url: string;
@@ -18,7 +18,7 @@ export default function TwitterCardMeta({ url, title, description }: Props) {
       />
       <meta
         property="twitter:description"
-        content={description ? description : config.site_description}
+        content={description || config.site_description}
       />
     </Head>
   );

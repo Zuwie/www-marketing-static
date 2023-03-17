@@ -1,10 +1,10 @@
-import { isInThePast } from "@/src/lib/helpers";
 import Image from "next/image";
 import { CalendarIcon, ClockIcon } from "@heroicons/react/24/outline";
-import { IEvent } from "@/src/pages/events/model";
 import ReactMarkdown from "react-markdown";
+import { IEvent } from "@/src/pages/events/model";
+import { isInThePast } from "@/src/lib/helpers";
 
-export default function Event({data}: {data: IEvent}) {
+export default function Event({data}: { data: IEvent }) {
   return (
     <div
       className={`flex flex-col overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all ${isInThePast(data.dateEnd || data.date) ? "opacity-70" : ""}`}>
