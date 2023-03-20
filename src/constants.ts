@@ -10,6 +10,8 @@ export const ROUTES = {
   WAPPLER: '/members',
   EVENTS: '/events',
   KONTAKT: '/contact',
+  LOCATION: '/location',
+  CALENDER: '/calender',
 }
 
 export const MAIN_NAVIGATION = Object.entries(ROUTES).map((key) => ({

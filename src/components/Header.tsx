@@ -16,16 +16,16 @@ function LogoLink() {
   );
 }
 
-function DesktopNavigation() {
+function MobileNavigation() {
   return (
     <div className="mt-6 flow-root">
       <div className="-my-6 divide-y divide-gray-500/25">
-        <ul className="space-y-2 py-6">
+        <ul className="space-y-2 py-6 text-white">
           {MAIN_NAVIGATION.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
-                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
+                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 hover:bg-gray-400/10"
               >
                 {item.name}
               </Link>
@@ -90,8 +90,7 @@ export default function Header() {
               <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true"/>
             </button>
           </div>
-          
-          <DesktopNavigation/>
+          <MobileNavigation/>
         </Dialog.Panel>
       </Dialog>
     </div>
