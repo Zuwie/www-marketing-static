@@ -1,14 +1,14 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="de">
       <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async/>
       </Head>
       <body>
-        <Main />
-        <NextScript />
+      <Main/>
+      <NextScript/>
       </body>
     </Html>
   );
