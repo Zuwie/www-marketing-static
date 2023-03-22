@@ -142,12 +142,39 @@ const config: Config = {
               label: 'List',
               widget: 'list',
               fields: [
-                { name: 'title', label: 'Title', widget: 'string' },
-                { name: 'body', label: 'Body', widget: 'string' },
+                {name: 'title', label: 'Title', widget: 'string'},
+                {name: 'body', label: 'Body', widget: 'string'},
               ]
             }
           ]
-        }
+        },
+        {
+          name: 'thirdSection',
+          label: 'Third Section',
+          file: 'content/landing_third.yml',
+          fields: [
+            {
+              name: 'images',
+              label: 'Images',
+              widget: 'list',
+              fields: [
+                {name: 'image', label: 'Image', widget: 'image'},
+              ]
+            },
+            {name: 'subTitle', label: 'Subtitle', widget: 'string'},
+            {name: 'title', label: 'Title', widget: 'string'},
+            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            {
+              name: 'list',
+              label: 'List',
+              widget: 'list',
+              fields: [
+                {name: 'title', label: 'Title', widget: 'string'},
+                {name: 'body', label: 'Body', widget: 'string'},
+              ]
+            }
+          ]
+        },
       ]
     },
     {

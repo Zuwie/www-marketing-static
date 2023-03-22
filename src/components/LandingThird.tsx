@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import OptionalSlider from "@/src/components/OptionalSlider";
 
-export default function About({images, subTitle, title, intro, list}) {
+export default function LandingThird({images, subTitle, title, intro, list}) {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
@@ -28,7 +28,7 @@ export default function About({images, subTitle, title, intro, list}) {
             </div>
           </div>
           <div className="flex items-start justify-end rounded-xl shadow-xl ring-1 ring-gray-400/10">
-            <OptionalSlider images={images} />
+            <OptionalSlider images={images}/>
           </div>
         </div>
       </div>

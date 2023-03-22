@@ -2,11 +2,12 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import ReactMarkdown from "react-markdown";
 import OptionalSlider from "@/src/components/OptionalSlider";
 
-export default function AboutSecond({images, subTitle, title, intro, list}) {
+export default function LandingSecond({images, subTitle, title, intro, list}) {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pt-4 lg:pl-4">
             <div className="lg:max-w-lg">
               <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">{subTitle}</h2>
