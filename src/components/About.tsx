@@ -1,5 +1,5 @@
-import { ServerIcon } from '@heroicons/react/20/solid'
 import ReactMarkdown from "react-markdown";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import OptionalSlider from "@/src/components/OptionalSlider";
 
 export default function About({images, subTitle, title, intro, list}) {
@@ -18,7 +18,7 @@ export default function About({images, subTitle, title, intro, list}) {
                 {list.map((listItem) => (
                   <div key={listItem.title} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <ServerIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true"/>
+                      <ArrowLongRightIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true"/>
                     </dt>
                     {' '}
                     <dd className="inline">{listItem.body}</dd>

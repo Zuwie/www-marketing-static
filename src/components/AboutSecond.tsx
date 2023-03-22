@@ -1,4 +1,4 @@
-import { ServerIcon } from "@heroicons/react/24/outline";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import ReactMarkdown from "react-markdown";
 import OptionalSlider from "@/src/components/OptionalSlider";
 
@@ -18,7 +18,7 @@ export default function AboutSecond({images, subTitle, title, intro, list}) {
                 {list.map((listItem) => (
                   <div key={listItem.title} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <ServerIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                      <ArrowLongRightIcon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true"/>
                     </dt>{' '}
                     <dd className="inline">{listItem.body}</dd>
                   </div>
