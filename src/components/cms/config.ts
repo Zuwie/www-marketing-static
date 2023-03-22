@@ -179,15 +179,15 @@ const config: Config = {
     {
       name: "events",
       label: "Events",
-      icon: "calender",
+      icon: "star",
       files: [
         {
           name: 'events',
           label: 'Events Page',
           file: 'content/events.yml',
           fields: [
-            { name: 'title', label: 'Title', widget: 'string' },
-            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {name: 'title', label: 'Title', widget: 'string'},
+            {name: 'intro', label: 'Intro', widget: 'markdown'},
             {
               name: 'events',
               label: 'Events',
@@ -227,21 +227,52 @@ const config: Config = {
     {
       name: "contact",
       label: "Contact",
-      icon: "calender",
+      icon: "envelope",
       files: [
         {
           name: 'contact',
           label: 'Contact Page',
           file: 'content/contact.yml',
           fields: [
-            { name: 'title', label: 'Title', widget: 'string' },
-            { name: 'intro', label: 'Intro', widget: 'markdown' },
+            {name: 'title', label: 'Title', widget: 'string'},
+            {name: 'intro', label: 'Intro', widget: 'markdown'},
+          ],
+        }],
+    },
+    {
+      name: "calender",
+      label: "Calender",
+      icon: "calender",
+      files: [
+        {
+          name: 'calender',
+          label: 'Calender Page',
+          file: 'content/calender.yml',
+          fields: [
+            {name: 'title', label: 'Title', widget: 'string', required: true},
+            {name: 'intro', label: 'Intro', widget: 'markdown'},
+          ],
+        }],
+    },
+    {
+      name: "location",
+      label: "Location",
+      icon: "map-pin",
+      files: [
+        {
+          name: 'location',
+          label: 'Location Page',
+          file: 'content/location.yml',
+          fields: [
+            {name: 'title', label: 'Title', widget: 'string', required: true},
+            {name: 'intro', label: 'Intro', widget: 'markdown'},
           ],
         }],
     },
     {
       name: "posts",
       label: "Blog",
+      icon: "newspaper",
       folder: "content/posts/",
       extension: "mdx",
       format: "frontmatter",
@@ -250,8 +281,8 @@ const config: Config = {
       identifier_field: "slug",
       summary: "{{title}}",
       fields: [
-        { label: "Slug", name: "slug", widget: "string" },
-        { label: "Title", name: "title", widget: "string" },
+        {label: "Slug", name: "slug", widget: "string"},
+        {label: "Title", name: "title", widget: "string"},
         { label: "Banner", name: "banner", widget: "image" },
         {
           label: "Publish Date",

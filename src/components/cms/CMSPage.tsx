@@ -3,14 +3,28 @@ import CMS from "@staticcms/core";
 import type { FC } from "react";
 import { useEffect } from "react";
 
-import { CalendarDaysIcon, Cog6ToothIcon, CubeIcon, EnvelopeIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import {
+  CalendarDaysIcon,
+  Cog6ToothIcon,
+  CubeIcon,
+  EnvelopeIcon,
+  HomeIcon,
+  MapPinIcon,
+  NewspaperIcon,
+  StarIcon,
+  UserGroupIcon
+} from "@heroicons/react/24/outline";
 import config from "./config";
 
 CMS.registerIcon('settings', () => <Cog6ToothIcon width={18}/>)
+CMS.registerIcon('home', () => <HomeIcon width={18}/>)
 CMS.registerIcon('cube', () => <CubeIcon width={18}/>)
 CMS.registerIcon('users', () => <UserGroupIcon width={18}/>)
 CMS.registerIcon('calender', () => <CalendarDaysIcon width={18}/>)
+CMS.registerIcon('star', () => <StarIcon width={18}/>)
+CMS.registerIcon('map-pin', () => <MapPinIcon width={18}/>)
 CMS.registerIcon('envelope', () => <EnvelopeIcon width={18}/>)
+CMS.registerIcon('newspaper', () => <NewspaperIcon width={18}/>)
 
 interface PostData {
   title: string;
