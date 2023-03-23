@@ -1,14 +1,17 @@
 {
-  "base_url": "https://earnest-lollipop-61838c.netlify.app",
-  "site_title": "Wiener Würfel Wappler",
-  "site_description": "Trete unserem Warhammer Club in Wien bei und erlebe epische Gaming-Momente!",
+  "base_url": "https://google.com",
+  "site_title": "Der Rostpinsel",
+  "site_description": "Tiroler Kunst auf Rostleinwand. Stefan Rizk verewigt seine Liebe zur Natur und dem Land Tirol auf vielen seiner Werke.",
   "site_keywords": [
-    "Warhammer",
-    "Age of Sigmar",
-    "40K"
+    "Kunst",
+    "Rostplatten",
+    "Oxidierte Stahlplatten",
+    "Stefan Rizk",
+    "Tirol",
+    "Rostpinsel"
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
   "github_account": "myaccount",
-  "discord_server": "https://discord.gg/YkXFvfwKRH"
+  "discord_server": "e"
 }
