@@ -61,7 +61,7 @@ events:
     address: WoW Keepers - Holochergasse 53 1150 Wien
     name: Wappler Bowl
     tag: bb
-    body: >
+    body: >+
       **Hard Facts:**
 
 
@@ -78,7 +78,18 @@ events:
 
 
       [T3 - Event Link](https://www.tabletopturniere.de/at/t3_tournament.php?tid=31697)
-    details: |
+
+
+      [Tournament Pack DE](https://drive.google.com/file/d/1I3ZfG5Y5ytkgoM_szA0vrPF_6-bw4R2a/view?usp=share_link)
+
+
+
+
+    details: >
+      [Tournament Pack
+      DE](https://drive.google.com/file/d/1I3ZfG5Y5ytkgoM_szA0vrPF_6-bw4R2a/view?usp=share_link)
+
+
       Mehr Infos in Kürze…
     banner: /images/bb-logo-lang-doppelt.jpg
     dateEnd: 2023-08-20T20:00:55+02:00
