@@ -308,9 +308,14 @@ const config: Config = {
       identifier_field: "slug",
       summary: "{{title}}",
       fields: [
-        {label: "Slug", name: "slug", widget: "string"},
+        {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "lowercase mit \"-\" als Ersatz für Whitespace. Slug wird für die URL benutzt."
+        },
         {label: "Title", name: "title", widget: "string"},
-        { label: "Banner", name: "banner", widget: "image" },
+        {label: "Banner", name: "banner", widget: "image"},
         {
           label: "Publish Date",
           name: "date",
