@@ -353,7 +353,15 @@ const config: Config = {
             },
           ],
         },
-        { label: "Body", name: "body", widget: "markdown" },
+        {
+          name: 'images',
+          label: 'Images',
+          widget: 'list',
+          fields: [
+            {name: 'image', label: 'Image', widget: 'image'},
+          ]
+        },
+        {label: "Body", name: "body", widget: "markdown"},
       ],
     },
   ],

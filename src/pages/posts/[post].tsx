@@ -17,6 +17,7 @@ export type Props = {
   tags: string[];
   author: string;
   description?: string;
+  images?: string | string[]
   source: MDXRemoteSerializeResult;
 };
 
@@ -26,7 +27,7 @@ const slugToPostContent = ((postContents) => {
   return hash;
 })(fetchPostContent());
 
-export default function Post({ title, dateString, slug, tags, author, description = "", source }: Props) {
+export default function Post({title, dateString, slug, tags, author, description = "", source, images}: Props) {
   return (
     <PostLayout
       title={title}
@@ -34,6 +35,7 @@ export default function Post({ title, dateString, slug, tags, author, descriptio
       slug={slug}
       tags={tags}
       author={author}
+      images={images}
       description={description}
     >
       <MDXRemote {...source} />

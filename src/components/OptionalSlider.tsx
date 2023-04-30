@@ -9,8 +9,8 @@ export default function OptionalSlider({images, width = 640, height = 640, class
         <Image
           src={images[0]}
           alt=""
-          width={640}
-          height={640}
+          width={width}
+          height={height}
           className={className}
         />
       ) : (
