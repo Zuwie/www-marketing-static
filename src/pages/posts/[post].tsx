@@ -28,6 +28,8 @@ const slugToPostContent = ((postContents) => {
 })(fetchPostContent());
 
 export default function Post({title, dateString, slug, tags, author, description = "", source, images}: Props) {
+  console.log("images", images)
+
   return (
     <PostLayout
       title={title}
@@ -67,6 +69,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       tags: data.tags,
       author: data.author,
       source: mdxSource,
+      images: data.images,
     },
   };
 };

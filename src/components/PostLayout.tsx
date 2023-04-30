@@ -76,7 +76,9 @@ export default function PostLayout({
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl">{title}</h1>
             </header>
 
-            {images && <OptionalSlider images={images}/>}
+            <div className="mx-auto flex justify-center">
+              {images && <OptionalSlider images={images}/>}
+            </div>
 
             <div className="mt-6">{children}</div>
             <footer className="mt-10 flex gap-4">
