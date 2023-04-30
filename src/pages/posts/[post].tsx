@@ -28,8 +28,6 @@ const slugToPostContent = ((postContents) => {
 })(fetchPostContent());
 
 export default function Post({title, dateString, slug, tags, author, description = "", source, images}: Props) {
-  console.log("images", images)
-
   return (
     <PostLayout
       title={title}
