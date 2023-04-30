@@ -357,6 +357,7 @@ const config: Config = {
           name: 'images',
           label: 'Images',
           widget: 'list',
+          required: false,
           fields: [
             {name: 'image', label: 'Image', widget: 'image'},
           ]
