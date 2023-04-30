@@ -1,6 +1,6 @@
 module.exports = ({
   pageExtensions: ["tsx"],
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config) => {
     config.module.rules.push(
       ...[
         {
@@ -16,14 +16,12 @@ module.exports = ({
     return config;
   },
   images: {
-    images: {
-      formats: [
-        'image/avif',
-        'image/webp',
-        'image/jpeg',
-        'image/png'
-      ]
-    },
+    // formats: [
+    //   'image/avif',
+    //   'image/webp',
+    //   'image/jpeg',
+    //   'image/png'
+    // ],
     remotePatterns: [
       {
         protocol: 'https',
