@@ -97,7 +97,7 @@ events:
     banner: /images/wappler-bowl-header-logo-small.jpg
     dateEnd: 2023-08-20T20:00:55+02:00
     images:
-      - /images/bb-logo-lang-doppelt.jpg
+      - /images/wappler-bowl-header-logo-small.jpg
   - date: 2023-08-27T08:45:15+02:00
     address: WoW Keepers - Holochergasse 53 1150 Wien
     name: Wappler Beach Brawl
@@ -124,7 +124,7 @@ events:
       Mehr Infos in Kürze…
     dateEnd: 2023-08-27T20:00:55+02:00
     images:
-      - /images/aos-logo-lang-doppelt.jpg
+      - /images/beach-brawl-header-logo-smaller.jpg
   - date: 2023-09-30T08:45:48+02:00
     name: Wappler Harvest Gatering
     tag: aos
