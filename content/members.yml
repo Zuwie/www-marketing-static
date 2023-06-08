@@ -38,7 +38,7 @@ members:
       Wappler seit erster Stunde
   - name: JJ
     role: "Member "
-    profilePicture: /images/jj.jpg
+    profilePicture: /images/jj2.jpg
     body: |
       Wappler seit erster Stunde - unsere Blood Bowl Elite
   - name: Chris - Rem
@@ -47,3 +47,8 @@ members:
       Prokastinator mit Hang zur Dramatik; will nur spielen.
     role: Member
     profilePicture: /images/bild_2023-03-05_200810430.png
+  - name: Mario - Mastuck
+    role: Member
+    body: |
+      Wappler seit erster Stunde - Unser Nurglemeister mit Hang zu Ratten 
+    profilePicture: /images/mario.jpg
