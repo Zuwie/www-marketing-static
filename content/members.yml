@@ -63,3 +63,9 @@ members:
     profilePicture: /images/bild_2023-07-10_211058771.png
     body: |
       Wappler seit erster Stunde - Zwergenmeister - Diggi, Diggi Hole…
+  - name: Felix
+    role: Member
+    body: >
+      Wappler zweiter Stunde -  Hit and Run ist seine Devise - Versteckt sich
+      gerne hinter Bäumen
+    profilePicture: /images/felix.jpg
