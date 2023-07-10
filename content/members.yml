@@ -50,5 +50,11 @@ members:
   - name: Mario - Mastuck
     role: Member
     body: |
-      Wappler seit erster Stunde - Unser Nurglemeister mit Hang zu Ratten 
+      Wappler seit erster Stunde - Unser Nurglemeister mit Hang zu Ratten
     profilePicture: /images/mario.jpg
+  - name: Andi - Blacky94
+    role: Member
+    body: >
+      Wappler seit erster Stunde - Unser Fischmeister, Drachenzähmer und
+      notorischer Elfenliebhaber
+    profilePicture: /images/bild_2023-07-10_210856039.png
