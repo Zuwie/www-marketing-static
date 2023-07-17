@@ -1,6 +1,9 @@
 import ReactMarkdown from "react-markdown";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import OptionalSlider from "@/src/components/OptionalSlider";
+import Link from "next/link";
+import {COMPANY, ROUTES} from "@/src/constants";
+import DiscordIcon from "@/src/components/DiscordIcon";
 
 export default function LandingThird({images, subTitle, title, intro, list}) {
   return (
@@ -24,6 +27,13 @@ export default function LandingThird({images, subTitle, title, intro, list}) {
                     <dd className="inline">{listItem.body}</dd>
                   </div>
                 ))}
+                <Link
+                    href={COMPANY.DISCORD}
+                    target="_blank"
+                    className="mt-8 inline-block rounded-md bg-indigo-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                >
+                  Trete uns auf Discord bei <DiscordIcon className="inline-block ml-2" />
+                </Link>
               </dl>
             </div>
           </div>
