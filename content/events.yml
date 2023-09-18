@@ -145,7 +145,7 @@ events:
   - date: 2023-09-30T08:45:48+02:00
     name: Wappler Harvest Gatering
     tag: aos
-    body: >+
+    body: >
       **Hard Facts:**
 
 
@@ -168,10 +168,6 @@ events:
       [BCP](https://www.bestcoastpairings.com/event/WL41AAKMD1)
 
       [T3](https://www.tabletopturniere.de/at/t3_tournament.php?tid=31699)
-
-
-
-
     details: >
       [Rulespack](https://fhtw-my.sharepoint.com/:b:/g/personal/iw21b043_technikum-wien_at/EXXwet2JZftAgJS7zaU0xnoBDTegMbGPMfc4DOsnajwlnQ?e=v5FB4L)
 
@@ -179,7 +175,7 @@ events:
 
       [T3](https://www.tabletopturniere.de/at/t3_tournament.php?tid=31699)
     address: WoW Keepers - Holochergasse 53 1150 Wien
-    banner: /images/aos-logo-lang-doppelt.jpg
+    banner: /images/harvestlogo72p.png
     dateEnd: 2023-10-01T16:00:55+02:00
     images:
       - /images/aos-logo-lang-doppelt.jpg
