@@ -1,14 +1,12 @@
 import ReactMarkdown from "react-markdown";
-import { IEvent } from "@/src/pages/events/model";
+import {IEvent} from "@/src/pages/events/model";
 import Event from "@/src/components/Event";
-import { getFileContent } from "@/src/lib/server";
+import {getFileContent} from "@/src/lib/server";
 import MyModal from "@/src/components/MyModal";
 import OptionalSlider from "@/src/components/OptionalSlider";
 import BasicMeta from "@/src/components/meta/BasicMeta";
 import OpenGraphMeta from "@/src/components/meta/OpenGraphMeta";
 import TwitterCardMeta from "@/src/components/meta/TwitterCardMeta";
-import {isInThePast} from "@/src/lib/helpers";
-import dayjs from "dayjs";
 
 export async function getStaticProps() {
   const data = getFileContent("content/events.yml")
