@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import OptionalSlider from "@/src/components/OptionalSlider";
 import Link from "next/link";
-import {COMPANY, ROUTES} from "@/src/constants";
+import OptionalSlider from "@/src/components/OptionalSlider";
+import {COMPANY} from "@/src/constants";
 import DiscordIcon from "@/src/components/DiscordIcon";
 
 export default function LandingThird({images, subTitle, title, intro, list}) {
