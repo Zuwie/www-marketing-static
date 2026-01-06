@@ -9,8 +9,9 @@ events:
     banner: /images/a1esports.jpeg
     tag: aos
     address: Austria Center Vienna  Bruno-Kreisky-Platz 1 1220 Vienna
-    body: >+
-      
+    body: "\n\n\n"
+    details: >+
+      The Summer Mayor will be back, this time as a singles event!
 
 
 
@@ -23,5 +24,3 @@ events:
 
 
 
-    details: |
-      The Summer Mayor will be back, this time as a singles event!
