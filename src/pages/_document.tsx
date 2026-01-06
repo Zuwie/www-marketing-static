@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="de">
       <Head>
-        <link rel="canonical" href="https://wuerfelwappler.at/" />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
         <link rel="icon" type="image/png" href="favicon.png" sizes="56x56" />
       </Head>
