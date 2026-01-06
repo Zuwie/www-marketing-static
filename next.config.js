@@ -1,4 +1,4 @@
-module.exports = ({
+module.exports = {
   pageExtensions: ["tsx"],
   webpack: (config) => {
     config.module.rules.push(
@@ -16,12 +16,7 @@ module.exports = ({
     return config;
   },
   images: {
-    // formats: [
-    //   'image/avif',
-    //   'image/webp',
-    //   'image/jpeg',
-    //   'image/png'
-    // ],
+    unoptimized: true, // Required for Netlify static deployments
     remotePatterns: [
       {
         protocol: 'https',
@@ -29,4 +24,4 @@ module.exports = ({
       }
     ],
   },
-});
+};
