@@ -106,7 +106,8 @@ const config: Config = {
               widget: 'list',
               fields: [
                 { name: 'image', label: 'Image', widget: 'image' },
-              ]},
+              ]
+            },
             { name: 'subTitle', label: 'Subtitle', widget: 'string' },
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
@@ -126,14 +127,15 @@ const config: Config = {
           label: 'Second Section',
           file: 'content/landing_second.yml',
           fields: [
-            { name: 'image', label: 'Images', widget: 'image'},
+            { name: 'image', label: 'Images', widget: 'image' },
             {
               name: 'images',
               label: 'Images',
               widget: 'list',
               fields: [
                 { name: 'image', label: 'Image', widget: 'image' },
-              ]},
+              ]
+            },
             { name: 'subTitle', label: 'Subtitle', widget: 'string' },
             { name: 'title', label: 'Title', widget: 'string' },
             { name: 'intro', label: 'Intro', widget: 'markdown' },
@@ -142,8 +144,8 @@ const config: Config = {
               label: 'List',
               widget: 'list',
               fields: [
-                {name: 'title', label: 'Title', widget: 'string'},
-                {name: 'body', label: 'Body', widget: 'string'},
+                { name: 'title', label: 'Title', widget: 'string' },
+                { name: 'body', label: 'Body', widget: 'string' },
               ]
             }
           ]
@@ -158,51 +160,51 @@ const config: Config = {
               label: 'Images',
               widget: 'list',
               fields: [
-                {name: 'image', label: 'Image', widget: 'image'},
+                { name: 'image', label: 'Image', widget: 'image' },
               ]
             },
-            {name: 'subTitle', label: 'Subtitle', widget: 'string'},
-            {name: 'title', label: 'Title', widget: 'string'},
-            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            { name: 'subTitle', label: 'Subtitle', widget: 'string' },
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
             {
               name: 'list',
               label: 'List',
               widget: 'list',
               fields: [
-                {name: 'title', label: 'Title', widget: 'string'},
-                {name: 'body', label: 'Body', widget: 'string'},
+                { name: 'title', label: 'Title', widget: 'string' },
+                { name: 'body', label: 'Body', widget: 'string' },
               ]
             }
           ]
         },
       ]
     },
-    {
-      name: 'members',
-      label: 'Members',
-      icon: "users",
-      files: [
-        {
-          name: 'members',
-          label: 'Members Page',
-          file: 'content/members.yml',
-          fields: [
-            { name: 'title', label: 'Title', widget: 'string' },
-            { name: 'intro', label: 'Intro', widget: 'markdown' },
-            {
-              name: 'members',
-              label: 'Members',
-              widget: 'list',
-              fields: [
-                {label: "Name", name: "name", widget: "string"},
-                {label: "Role", name: "role", widget: "string"},
-                {label: 'Profile Picture', name: 'profilePicture', widget: 'image'},
-                {label: "Body", name: "body", widget: "markdown"},
-              ],
-            },
-          ],
-        }],
-    },
+    // {
+    //   name: 'members',
+    //   label: 'Members',
+    //   icon: "users",
+    //   files: [
+    //     {
+    //       name: 'members',
+    //       label: 'Members Page',
+    //       file: 'content/members.yml',
+    //       fields: [
+    //         { name: 'title', label: 'Title', widget: 'string' },
+    //         { name: 'intro', label: 'Intro', widget: 'markdown' },
+    //         {
+    //           name: 'members',
+    //           label: 'Members',
+    //           widget: 'list',
+    //           fields: [
+    //             {label: "Name", name: "name", widget: "string"},
+    //             {label: "Role", name: "role", widget: "string"},
+    //             {label: 'Profile Picture', name: 'profilePicture', widget: 'image'},
+    //             {label: "Body", name: "body", widget: "markdown"},
+    //           ],
+    //         },
+    //       ],
+    //     }],
+    // },
     {
       name: "events",
       label: "Events",
@@ -213,8 +215,8 @@ const config: Config = {
           label: 'Events Page',
           file: 'content/events.yml',
           fields: [
-            {name: 'title', label: 'Title', widget: 'string'},
-            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
             {
               name: 'events',
               label: 'Events',
@@ -245,7 +247,8 @@ const config: Config = {
                   required: false,
                   fields: [
                     { name: 'image', label: 'Image', widget: 'image' },
-                  ]},
+                  ]
+                },
               ],
             },
           ],
@@ -261,8 +264,8 @@ const config: Config = {
           label: 'Contact Page',
           file: 'content/contact.yml',
           fields: [
-            {name: 'title', label: 'Title', widget: 'string'},
-            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            { name: 'title', label: 'Title', widget: 'string' },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
           ],
         }],
     },
@@ -276,8 +279,8 @@ const config: Config = {
           label: 'Calender Page',
           file: 'content/calender.yml',
           fields: [
-            {name: 'title', label: 'Title', widget: 'string', required: true},
-            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            { name: 'title', label: 'Title', widget: 'string', required: true },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
           ],
         }],
     },
@@ -291,8 +294,8 @@ const config: Config = {
           label: 'Location Page',
           file: 'content/location.yml',
           fields: [
-            {name: 'title', label: 'Title', widget: 'string', required: true},
-            {name: 'intro', label: 'Intro', widget: 'markdown'},
+            { name: 'title', label: 'Title', widget: 'string', required: true },
+            { name: 'intro', label: 'Intro', widget: 'markdown' },
           ],
         }],
     },
@@ -314,8 +317,8 @@ const config: Config = {
           widget: "string",
           hint: "lowercase mit \"-\" als Ersatz für Whitespace. Slug wird für die URL benutzt."
         },
-        {label: "Title", name: "title", widget: "string"},
-        {label: "Banner", name: "banner", widget: "image"},
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Banner", name: "banner", widget: "image" },
         {
           label: "Publish Date",
           name: "date",
@@ -359,10 +362,10 @@ const config: Config = {
           widget: 'list',
           required: false,
           fields: [
-            {name: 'image', label: 'Image', widget: 'image'},
+            { name: 'image', label: 'Image', widget: 'image' },
           ]
         },
-        {label: "Body", name: "body", widget: "markdown"},
+        { label: "Body", name: "body", widget: "markdown" },
       ],
     },
   ],

@@ -7,7 +7,7 @@ export const WEB3FORMS_KEY = "15554bb9-29c7-40dc-90ad-e4a654df9a42"
 
 export const ROUTES = {
   BLOG: '/posts',
-  WAPPLER: '/members',
+  // WAPPLER: '/members', 
   EVENTS: '/events',
   KONTAKT: '/contact',
   LOCATION: '/location',
