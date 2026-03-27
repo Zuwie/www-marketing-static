@@ -54,7 +54,7 @@ events:
     tag: aos
     body: |
       Beach Brawl 2026
-    banner: /images/webseite-jpg-small.jpg
+    banner: /images/beach-brawl-header-logo-smaller.jpg
   - date: 2026-10-25T08:00:02+01:00
     dateEnd: 2026-10-25T20:00:02+01:00
     name: Harvest Gathering 2026
