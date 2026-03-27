@@ -1,8 +1,10 @@
-image: /images/clubneu2.jpg
+image: /images/webseite-jpg-small.jpg
 images:
+  - /images/clubneu2.jpg
   - /images/clubneu4.jpg
   - /images/clubneu8.jpg
   - /images/clubneu11.jpg
+  - /images/clubneu5.jpg
 subTitle: Club & Eventorganisation
 title: Clubabende - für Gäste offen
 intro: >
