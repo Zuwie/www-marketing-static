@@ -3,13 +3,34 @@ intro: >
   Hier findet ihr unsere anstehenden und vergangenen Events - Come join us
   at the Table
 events:
+  - date: 2026-04-12T09:00:06+02:00
+    dateEnd: 2026-04-12T20:00:06+02:00
+    name: Osterrumble 2026
+    address: Holochergasse 53 1150 Wien
+    banner: /images/webseite-jpg-small.jpg
+    details: >
+      [https://www.tabletopturniere.de/at/t3_tournament.php?tid=40638](https://www.tabletopturniere.de/at/t3_tournament.php?tid=40638)
+    tag: aos
+    body: |
+      Osterrumble 2026
+  - date: 2026-05-17T09:00:55+02:00
+    dateEnd: 2026-05-17T20:00:55+02:00
+    name: Spring Bash 2026
+    address: TBD
+    tag: aos
+    details: >
+      [https://www.tabletopturniere.de/at/t3_tournament.php?tid=40639](https://www.tabletopturniere.de/at/t3_tournament.php?tid=40639)
+    banner: /images/screenshot-2023-02-23-at-14.47.49.png
+    body: |
+      Spring Bash 2026
   - date: 2026-07-11T09:00:34+02:00
     dateEnd: 2026-07-12T20:00:51+02:00
     name: Summer Mayor Vienna 2026
     banner: /images/a1esports.jpeg
     tag: aos
     address: Austria Center Vienna  Bruno-Kreisky-Platz 1 1220 Vienna
-    body: "\n\n\n"
+    body: |
+      The Summer Mayor will be back, this time as a singles event!
     details: >+
       The Summer Mayor will be back, this time as a singles event!
 
@@ -24,3 +45,33 @@ events:
 
 
 
+  - date: 2026-08-30T08:00:09+02:00
+    dateEnd: 2026-08-30T20:00:09+02:00
+    name: Beach Brawl 2026
+    address: TBD
+    details: >
+      [https://www.tabletopturniere.de/at/t3_tournament.php?tid=40640](https://www.tabletopturniere.de/at/t3_tournament.php?tid=40640)
+    tag: aos
+    body: |
+      Beach Brawl 2026
+    banner: /images/webseite-jpg-small.jpg
+  - date: 2026-10-25T08:00:02+01:00
+    dateEnd: 2026-10-25T20:00:02+01:00
+    name: Harvest Gathering 2026
+    address: TBD
+    banner: /images/harvestlogo72p.png
+    tag: aos
+    body: |
+      Harvest Gathering 2026
+    details: >
+      [https://www.tabletopturniere.de/at/t3_tournament.php?tid=40641](https://www.tabletopturniere.de/at/t3_tournament.php?tid=40641)
+  - date: 2026-12-20T08:00:19+01:00
+    dateEnd: 2026-12-20T20:00:19+01:00
+    name: Winter Wappler Land 2026
+    address: TBD
+    banner: /images/logo-winter-klein.jpg
+    tag: aos
+    details: >
+      [https://www.tabletopturniere.de/at/t3_tournament.php?tid=40642](https://www.tabletopturniere.de/at/t3_tournament.php?tid=40642)
+    body: |
+      Winter Wappler Land 2026
